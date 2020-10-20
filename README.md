@@ -1,2 +1,2 @@
-# CF-Templates
-Free ComicFury Templates
+# ComicFury Layouts
+Free ComicFury Layouts
