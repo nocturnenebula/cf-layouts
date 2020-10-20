@@ -2,7 +2,7 @@
 Free ComicFury layouts for wear and tear. These were originally made for SmackJeeves up until they were bought out by NHN and then disallowed custom layouts. 
 
 ## What's This All About
-ComicFury is a free comic publishing site that allows custom layouts for your comic. These layouts are for CF use only and won't work on other sites like it (if there are any left). 
+ComicFury is a free comic publishing site that allows custom layouts for your comic. These layouts are for CF use only and won't work on other sites like it (if there are any left). Note that the demos link outside of Github. 
 
 
 ## Copyright & License
