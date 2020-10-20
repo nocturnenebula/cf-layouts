@@ -1,40 +1,23 @@
 [c:hasblogs]
-
-
-        <div id="bloglist">
-            <div class="seperator"></div>
             [l:blogs_paginated]
 
-                <span class="posttime">[v:l.posttime]</span>
+              <h2 class="title"><a href="[v:l.bloglink]">[v:l.blogtitle]</a></h2>
+              <strong><a href="[v:l.profilelink]" class="author">[v:l.authorname]</a></strong> <small>[v:l.posttime]</small>
 
-                <div class="authordata">
-                    <a href="[v:l.profilelink]" class="author">[v:l.authorname]</a>
-                </div>
-
-                <span class="blogtitle">
-                    <a href="[v:l.bloglink]">[v:l.blogtitle]</a>
-                </span>
-
-                <div class="blogcontent">
-                    [v:l.blog]
-                    <div class="clear"></div>
-                </div>
+                <div class="blog content">[v:l.blog]</div>
 
                 [c:l.allowcomments]
                     <div class="blogmeta">
-                        <a href="[v:l.bloglink]">[v:l.comments] Comments &gt;&gt;</a>
+                        <a href="[v:l.bloglink]">[v:l.comments] Comments</a>
                     </div>
                 [/]
 
-                <div class="seperator"></div>
+                <hr />
             [/]
-        </div>
 
         [c:lastpagenumber>1]
-            <div id="pageslabel">
-                Pages:
-            </div>
-            <div id="pages">
+
+            <div id="pages" class="has-text-centered">
                 [l:pages]
                     [c:l.skipped_ahead]
                         <span class="pageskip">...</span>
@@ -53,15 +36,13 @@
             </div>
         [/]
 
-[/]
-
 
 [c:!hasblogs]
     <h2 class="heading">Error:</h2>
 
     <div class="afterheading">
         <div id="errormessage">
-            There are currently no blogs.
+            There are currently no blog posts.
         </div>
     </div>
 [/]

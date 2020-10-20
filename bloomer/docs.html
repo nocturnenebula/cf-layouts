@@ -26,14 +26,14 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 	<li><a href="#credits">Credits</a></li>
 </ul>
 
-<p class="menu-label"><a href="#overall">Overall Layout</a></p>
+<p class="menu-label"><a href="#overall">Overall</a></p>
 
 <ul class="menu-list">
-	<li><a href="#css">CSS</a></li>
+	<li><a href="#css">Layout CSS</a></li>
 	<li><a href="#header">Header</a></li>
-	<li><a href="#nagivation">Navigation</a></li>
 	<li><a href="#banner">Banner</a></li>
-	<li><a href="#main">Main Content</a></li>
+	<li><a href="#nagivation">Navigation</a></li>
+	<li><a href="#main">Content</a></li>
 	<li><a href="#footer">Footer</a></li>
 </ul>
 
@@ -135,20 +135,20 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
   	<li>Normalize</li>
   	<li>jquery</li>
   	<li>Comic navigation icons from modern comic layout</li>
-  	<li>Icons by fontawesome</li>
-  	<li>Bloomer icon font: <a href="https://creativemarket.com/izzylikestodoodle/2565500-Watermelon-A-Chunky-Bold-Font">Watermelon</a> by izzylikestodoodle</li>
+  	<li>Icons by <a href="https://fontawesome.com/" target="_blank">fontawesome</a></li>
+  	<li>Bloomer icon font: <a href="https://creativemarket.com/izzylikestodoodle/2565500-Watermelon-A-Chunky-Bold-Font" target="_blank">Watermelon</a> by izzylikestodoodle</li>
   </ul>
   </div>
 
   <hr />
-  <h3 class="title is-3" id="overall">Overall Layout</h3>
+  <h3 class="title is-3" id="overall">Overall</h3>
 
   <div class="content">&nbsp;</div>
 
-  <h4 class="title is-4" id="header">CSS</h4>
+  <h4 class="title is-4" id="header">Layout CSS</h4>
 
   <div class="content">
-  <p>All of the CSS is located in the <code class="html">Layout CSS</code> secition. It uses <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">CSS variables</a></strong> so that all of your customization stays in one place and you don't have to manually change every line of CSS that shares the same properties.</p>
+  <p>All of the CSS is located in the <code class="html">Layout CSS</code> section. It uses <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">CSS variables</a></strong> so that all of your customization stays in one place and you don't have to manually change every line of CSS that shares the same properties.</p>
 
   <p>These are the default variables you can edit.</p>
   </div>
@@ -183,15 +183,20 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 
   <div class="content">&nbsp;</div>
 
-  <h4 class="title is-4" id="nagivation">Navigation</h4>
 
-  <div class="content">See <a href="#menu">menu</a>.</div>
-
-  <h4 class="title is-4" id="banner">Banner</h4>
+	<h4 class="title is-4" id="banner">Banner</h4>
 
   <div class="content">&nbsp;</div>
 
-  <h4 class="title is-4" id="main">Main Content</h4>
+
+  <h4 class="title is-4" id="nagivation">Navigation</h4>
+
+  <div class="content">
+		<p>The menu controls the entire navigation, and it appears on every page. By default, the navigation displays the logo, links and then a dropdown featuring your own custom links.</p>
+	</div>
+
+
+  <h4 class="title is-4" id="main">Content</h4>
 
   <div class="content">&nbsp;</div>
 
@@ -200,11 +205,6 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
   <div class="content">&nbsp;</div>
 
   <hr />
-  <h3 class="title is-3" id="menu">Menu</h3>
-
-  <div class="content">
-  <p>The menu controls the entire navigation, and it appears on every page. By default, the nagivation displays the logo, links for &quot;Home&quot;, &quot;First Comic&quot;, &quot;Latest Comic&quot;, and &quot;Archive&quot;, then links to your custom pages.</p>
-  </div>
 
   <h4 class="title is-4" id="logo">Logo</h4>
 
@@ -285,45 +285,79 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
   </div>
   <!-- insert navbar example -->
 
-  <nav aria-label="main navigation" class="navbar is-dark has-shadow" role="navigation">
+	<nav class="navbar is-dark has-shadow" role="navigation" aria-label="main navigation">
   <div class="container">
-  <div class="navbar-brand"><a class="navbar-item" href="/"><!-- replace the image with your own comic logo --> <img height="28" src="https://nocturnenebula.github.io/sj-layouts/bloomer/logo_white.png" width="128" /> </a> <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navbarBasicExample" role="button"> </a></div>
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img src="https://nocturnenebula.github.io/cf-layouts/bloomer/images/logo.png" width="128" height="28">
+      </a>
 
-  <div class="navbar-menu" id="navbar-menu">
-  <div class="navbar-start"><!--  see http://bloomer-layout.smackjeeves.com/docs to customize the navigation--><!-- BEGIN links --><a class="navbar-item" href="{links.URL}">{links.TEXT}</a> <!-- END links --> <!-- change the link names and add the URLs for the dropdown here -->
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
 
-  <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link"> Dropdown <!-- change the name to something like more, further reading, etc. --> </a>
+    <div id="navbar-menu" class="navbar-menu">
+      <div class="navbar-start">
 
-  <div class="navbar-dropdown"><!-- custom outgoing links go here --><a class="navbar-item" href="#your link here">Link </a> <a class="navbar-item" href="#your link here">Link </a> <a class="navbar-item" href="#your link here">Link </a>
+        <a class="navbar-item" href="/">Home</a>
+        <a class="navbar-item" href="/comics/1">First</a>
+        <a class="navbar-item" href="/comics/">Latest</a>
+        <a class="navbar-item" href="/archive/">Archive</a>
+        <a class="navbar-item" href="/blog/">Blog</a>
 
-  <hr class="navbar-divider" /> <a class="navbar-item" href="#your link here">Separated Link </a> <a class="navbar-item" href="#your link here"><span>Icon Link</span></a></div>
+        [l:extrapages]
+          <a class="navbar-item" href="[v:l.link]">[v:l.title]</a>
+        [/]
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">Links</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item">Link</a>
+            <a class="navbar-item">Link</a>
+            <a class="navbar-item">Link</a>
+            <hr class="navbar-divider">
+            [c:infinitescrollenabled]
+              <a class="navbar-item" href="[v:infinitescrolllink]">Scroll View</a>
+            [/]
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+           <div class="field is-grouped">
+            <p class="control">
+                <a href="[v:addsubscriptionlink]" target="_blank"><span class="icon has-text-danger"><i class="fas fa-heart"></i></span></a>
+              </a>
+            </p>
+            <p class="control">
+              <a href="#" target="_blank">
+                <span class="icon"><i class="fab fa-patreon"></i></span>
+              </a>
+            </p>
+            <p class="control">
+              <a href="#" target="_blank">
+                <span class="icon"><i class="fab fa-facebook"></i></span>
+              </a>
+            </p>
+            <p class="control">
+              <a href="#" target="_blank">
+                <span class="icon"><i class="fab fa-twitter"></i></span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  </div>
-
-  <div class="navbar-end">
-  <div class="navbar-item">
-  <div class="field is-grouped">
-  <p class="control">&nbsp;</p>
-
-  <p class="control">&nbsp;</p>
-
-  <p class="control">&nbsp;</p>
-
-  <p class="control">&nbsp;</p>
-
-  <p class="control">&nbsp;</p>
-
-  <p class="control">&nbsp;</p>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </nav>
+</nav>
   <!-- end navbar example -->
 
   <hr />
-  <h3 class="title is-3">News / Welcome Page</h3>
+  <h3 class="title is-3">Overview</h3>
 
   <div class="content">&nbsp;</div>
 
