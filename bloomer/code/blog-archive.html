@@ -1,0 +1,67 @@
+[c:hasblogs]
+
+
+        <div id="bloglist">
+            <div class="seperator"></div>
+            [l:blogs_paginated]
+
+                <span class="posttime">[v:l.posttime]</span>
+
+                <div class="authordata">
+                    <a href="[v:l.profilelink]" class="author">[v:l.authorname]</a>
+                </div>
+
+                <span class="blogtitle">
+                    <a href="[v:l.bloglink]">[v:l.blogtitle]</a>
+                </span>
+
+                <div class="blogcontent">
+                    [v:l.blog]
+                    <div class="clear"></div>
+                </div>
+
+                [c:l.allowcomments]
+                    <div class="blogmeta">
+                        <a href="[v:l.bloglink]">[v:l.comments] Comments &gt;&gt;</a>
+                    </div>
+                [/]
+
+                <div class="seperator"></div>
+            [/]
+        </div>
+
+        [c:lastpagenumber>1]
+            <div id="pageslabel">
+                Pages:
+            </div>
+            <div id="pages">
+                [l:pages]
+                    [c:l.skipped_ahead]
+                        <span class="pageskip">...</span>
+                    [/]
+
+                    [c:l.is_current]
+                        <span class="currentpage">
+                    [/]
+
+                    <a href="[v:l.pagelink]" class="pagelink">[v:l.page]</a>
+
+                    [c:l.is_current]
+                        </span>
+                    [/]
+                [/]
+            </div>
+        [/]
+
+[/]
+
+
+[c:!hasblogs]
+    <h2 class="heading">Error:</h2>
+
+    <div class="afterheading">
+        <div id="errormessage">
+            There are currently no blogs.
+        </div>
+    </div>
+[/]

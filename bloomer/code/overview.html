@@ -1,0 +1,51 @@
+<a href="/comics/1">
+  <span class="title">Welcome to [v:webcomicname]</span><br />
+  <span class="description">
+    <img class="thumb" src="" />
+    [v:webcomicdescription]
+  </span>
+  <span class="read_link">Start Reading</span>
+</a>
+
+<a href="/comics/">
+  <span class="title">Latest Page</span><br />
+  [c:hascomics]
+    <img class="thumb" src="{latest_comic.THUMBNAIL_IMG_SRC}" /><br />
+  [/]
+  <span class="read_link">Continue Reading</span>
+</a>
+
+
+[l:latestblogs]
+<div class="post">
+
+<div class="news-header">
+
+  <img class="avatar" src="[v:l.avatar]" />
+  <div class="post-title">
+    [v:l.blogtitle]
+    <span class="author">by <a href="[v:l.profilelink]">[v:l.authorname]</a></span>
+  </div>
+  <div class="date">[v:l.posttime]</div>
+
+  <div class="clear"></div>
+
+</div>
+
+<div class="news-body">
+
+  [v:l.blog]
+
+</div>
+
+<a class="comments-link" href="[v:l.bloglink]">[v:l.comments] Comments</a>
+
+</div>
+[/]
+
+
+<div class="older-news">
+
+<a href="/news-archive/">Older News</a>
+
+</div>

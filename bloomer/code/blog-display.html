@@ -1,0 +1,70 @@
+<div class="columns">
+			<div class="column is-three-quarters">
+
+					<img class="avatar" src="[v:avatar]" />
+						[v:blogtitle]
+						<span class="author">by <a href="[v:profilelink]">[v:authorname]</a></span>
+					[v:posttime]
+
+					[v:blog]
+
+
+					Comments<
+					<a href="[v:commentlink]"" onclick="var new_window = window.open('[v:commentlink]', 'sj_comment', 'height=320, width=420'); new_window.focus(); return false;">Leave a Comment</a>
+
+				[l:comments]
+
+				<div class="comment [c:l.is_reply]reply[/]">
+
+					<ul>
+						<li><a class="reply" href="[v:l.replylink]" onclick="var new_window = window.open('[v:l.replylink]', 'sj_comment', 'height=340, width=420'); new_window.focus(); return false;"></a></li>
+
+						<span class="[v:l.editclass]">
+						<li><a class="edit" href="[v:l.editlink]" onclick="var new_window = window.open('[v:l.editlink]', 'sj_comment', 'height=340, width=420'); new_window.focus(); return false;"></a></li>
+						</span>
+
+						<span class="[v:l.deleteclass]">
+						<li><a class="delete" href="[v:l.deletelink]" onclick="var new_window = window.open('[v:l.deletelink]', 'sj_comment', 'height=340, width=420'); new_window.focus(); return false;"></a></li>
+						</span>
+
+					</ul>
+
+					<div class="avatar">
+
+						[c:l.avatar]
+						<img src="[v:l.avatar]" />
+						[/]
+
+						<!-- BEGIN switch_poster_no_avatar -->
+						<img src="http://www.smackjeeves.com/templates/modern/images/guest.png" />
+						<!-- END switch_poster_no_avatar -->
+
+					</div>
+
+
+							<a href="[v:l.profilelink]" target="_blank">[v:l.authorname]</a>
+							<span class="date">[v:l.posttime]</span>
+
+						</div>
+
+							<span class="title">[v:l.commenttitle]</span>
+							[v:l.comment]
+
+
+
+				[/]
+
+					<div class="footer">
+
+						<a class="post_comment" href="[v:commentlink]" onclick="var new_window = window.open('[v:commentlink]', 'sj_comment', 'height=350, width=420'); new_window.focus(); return false;">Leave a Comment</a>
+
+					</div>
+		</div>
+  <div class="column">
+    <aside class="menu">
+      <ul class="menu-list months">
+
+        </ul>
+      </aside>
+    </div>
+</div>

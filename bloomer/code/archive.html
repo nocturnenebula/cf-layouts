@@ -1,0 +1,36 @@
+<h2 class="title is-2">Comic Archive</h2>
+
+[c:usechapters]
+<h4 class="subtitle is-5">[v:l.chaptername]</h4>
+[/]
+
+ [l:chapteredarchive][c:l.newchapter]
+
+ <table class="table is-fullwidth is-hoverable">
+	 <thead>
+		 <th>#</th>
+		 <th>Title</th>
+		 <th>Date Released</th>
+		 <th>Comments</th>
+	 </thead>
+
+	 [c:usechapters]
+	 <h4 class="subtitle is-5">[v:l.chaptername]</h4>
+	 [/]
+
+	 [/]
+
+	 <tr>
+		 <td>[v:l.number]</td>
+		 <td>
+			 <a href="[v:l.comicurl]">[v:l.comictitle]</a>
+		 </td>
+		 <td>[v:l.posttime]</td>
+		 <td><a href="[v:l.comicurl]">[v:l.comments] Comments</a></td>
+	 </tr>
+
+	 [c:l.newchapter]
+
+	 [/][/]
+
+ </table>
