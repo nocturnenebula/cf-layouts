@@ -1,0 +1,23 @@
+:root{ /* learn more about it here: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+
+--body-bg-color:#FFF; /*this changes the overall page's background color*/
+--body-bg-image: url(''); /*add the body image here*/
+--body-bg-position: center repeat; /*add the body image positioning here*/
+
+--body-font: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid     Sans","Helvetica Neue",Helvetica,Arial,sans-serif ; /*change the font-family of the entire site here*/
+--body-font-size: 16px; /*change the font size of the entire site here*/
+--body-color:#4a4a4a; /*change the font color of the entire site here*/
+
+--link-color:#3273dc; /*change the links color here*/
+--link-hover-color: #363636  /*change the links hover color here*/;
+
+--banner-image:  url('http://placehold.it/1600x350?text=Banner+Image'); /* replace the background here */
+--banner-position: center no-repeat;
+--banner-bg-color: #FFF; /*-- you can change the color of the banner bg here (if using transparent images) */
+--banner-size: cover; /* this stretches the banner out to cover the whole area */
+--banner-height: 350px; /*-- you can change the height of the banner here */
+}
+
+html, body{
+min-height:100vh;
+}
