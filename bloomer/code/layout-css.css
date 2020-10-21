@@ -9,12 +9,12 @@
 --body-color:#4a4a4a; /*change the font color of the entire site here*/
 
 --link-color:#3273dc; /*change the links color here*/
---link-hover-color: #363636  /*change the links hover color here*/;
+--link-hover-color: #363636;  /*change the links hover color here*/
 
 --banner-bg-color: #FFF; /*-- you can change the color of the banner bg here (if using transparent images) */
 --banner-image:  url('http://placehold.it/1600x350/00d1b2/FFFFFF/?text=Banner+Image'); /* replace the background here */
---banner-position: center;
---banner-repeat: no-repeat;
+--banner-position: center; /*-- by default, the banner is centered. this is where you can change it --*/
+--banner-repeat: no-repeat; /*-- by default, it's set not to repeat. you can change it to repeat, repeat-x, repeat-y, etc. --*/
 --banner-size: cover; /* this stretches the banner out to cover the whole area */
 --banner-height: 350px; /*-- you can change the height of the banner here */
 }
@@ -23,10 +23,53 @@ html, body{
 min-height:100vh;
 }
 
-.hero{
-background: var(--banner-image);
-background-position: var(--banner-position);
-background-repeat: var(--banner-repeat);
-background-size: var(--banner-size);
-height: var(--banner-height);
+
+hr:last-child {
+    display: none;
+}
+
+.banner{
+  background: var(--banner-image);
+  background-position: var(--banner-position);
+  background-repeat: var(--banner-repeat);
+  background-size: var(--banner-size);
+  height: var(--banner-height);
+}
+
+.pushed-up{
+    margin-top: -6em;
+}
+
+.ftfy{
+    margin-left: .6em;
+}
+
+#latestcomicimage{
+    box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+    max-width:350px;
+}
+
+/* Some comic page cosmetics..... */
+
+.comic-nav span {
+    position: relative;
+    top: -6px;
+    padding: 0 1em;
+}
+
+.comic-nav a{
+  color: var(--body-color);
+}
+
+.comic-nav a:hover{
+  color: #777;
+}
+
+/* Mobile support cosmetic changes... */
+
+@media screen and (max-width: 768px){
+  .comic-nav span{
+    display: none;
+  }
+
 }

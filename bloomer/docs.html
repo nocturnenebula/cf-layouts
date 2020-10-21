@@ -20,7 +20,7 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <ul class="menu-list">
 	<li><a href="#features">Features</a></li>
 	<li><a href="#install">Install</a></li>
-	<li><a href="#repository">Repository</a></li>
+	<li><a href="#repo">Repository</a></li>
 	<li><a href="#features">Features</a></li>
 	<li><a href="#support">Support</a></li>
 	<li><a href="#credits">Credits</a></li>
@@ -29,33 +29,43 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <p class="menu-label"><a href="#overall">Overall</a></p>
 
 <ul class="menu-list">
-	<li><a href="#css">Layout CSS</a></li>
-	<li><a href="#header">Header</a></li>
-	<li><a href="#banner">Banner</a></li>
-	<li><a href="#nagivation">Navigation</a></li>
-	<li><a href="#main">Content</a></li>
-	<li><a href="#footer">Footer</a></li>
-</ul>
-
-<p class="menu-label"><a href="#menu">Menu</a></p>
-
-<ul class="menu-list">
+	<li><a href="#header">Header/Banner</a></li>
+	<li><a href="#nagivation">Menu</a></li>
 	<li><a href="#logo">Logo</a></li>
 	<li><a href="#links">Links</a></li>
 	<li><a href="#dropdown">Dropdown</a></li>
 	<li><a href="#icons">Icons</a></li>
+	<li><a href="#content">Content</a></li>
+	<li><a href="#footer">Footer</a></li>
+	<li><a href="#layout-css">Layout CSS</a></li>
 	<li><a href="#customizing">Customizing</a></li>
 </ul>
 
-<p class="menu-label"><a href="#news-welcome">News / Welcome Page</a></p>
+<p class="menu-label"><a href="#comic">Comic Page</a></p>
 
 <ul class="menu-list">
-	<li><a href="#description&gt;Description&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a  data-cke-saved-href=">First/Latest Page</a></li>
-	<li><a href="#news-feed">News Feed</a></li>
+	<li><a href="#comic-navigation">Comic Navigation</a></li>
+	<li><a href="#comic-page">Comic Page Image</a></li>
+	<li><a href="#comic-comments">Comments</a></li>
 </ul>
 
-<p class="menu-label"><a href="#news-archive">News Archive</a></p>
+<p class="menu-label"><a href="#archive">Archive</a></p>
+
+<ul class="menu-list">
+	<li><a href="#comic-archive-default">Default</a></li>
+</ul>
+
+<p class="menu-label"><a href="#news-welcome">Overview</a></p>
+
+<ul class="menu-list">
+	<li><a href="#link">Link</a></li>
+	<li><a href="#link">Link</a></li>
+</ul>
+
+<p class="menu-label"><a href="#search">Search</a></p>
+
+
+<p class="menu-label"><a href="#blog-archive">Blog Archive</a></p>
 
 <ul class="menu-list">
 	<li><a>News Article</a></li>
@@ -63,28 +73,19 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 	<li><a>Comments</a></li>
 </ul>
 
-<p class="menu-label"><a href="#comic">Comic Page</a></p>
+<p class="menu-label"><a href="#blog-display">Blog Display</a></p>
 
 <ul class="menu-list">
-	<li><a>Comic Title</a></li>
-	<li><a href="#comic-navigation">Comic Navigation</a></li>
-	<li><a href="#comic-page">Comic Page</a></li>
-	<li><a href="#comic-comments">Comments</a></li>
+	<li><a>Article</a></li>
 </ul>
 
-<p class="menu-label"><a href="#comic-archive">Comic Archive</a></p>
+
+<p class="menu-label"><a href="#error">Error Page</a></p>
 
 <ul class="menu-list">
-	<li><a href="#comic-archive-default">Default Version</a></li>
-	<li><a href="#comic-archive-alternate">Alternate Version</a></li>
+	<li><a>Article</a></li>
 </ul>
 
-<p class="menu-label"><a href="#custom-page">Custom Page</a></p>
-
-<ul class="menu-list">
-	<li><a href="#custom-page-default">Default</a></li>
-	<li><a href="#custom-page-extra">Extra</a></li>
-</ul>
 </aside>
 </div>
 
@@ -101,7 +102,7 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
   <p>You can install the basic layout <a href="#">here</a>.</p>
   </div>
 
-  <h4 class="title is-4" id="repository">Repository</h4>
+  <h4 class="title is-4" id="repo">Repository</h4>
 
   <div class="content">
   <h5 class="subtitle is-5">You can also download the layout from the repository on Github:<br />
@@ -134,7 +135,6 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
   <ul>
   	<li>Normalize</li>
   	<li>jquery</li>
-  	<li>Comic navigation icons from modern comic layout</li>
   	<li>Icons by <a href="https://fontawesome.com/" target="_blank">fontawesome</a></li>
   	<li>Bloomer icon font: <a href="https://creativemarket.com/izzylikestodoodle/2565500-Watermelon-A-Chunky-Bold-Font" target="_blank">Watermelon</a> by izzylikestodoodle</li>
   </ul>
@@ -143,220 +143,102 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
   <hr />
   <h3 class="title is-3" id="overall">Overall</h3>
 
-  <div class="content">&nbsp;</div>
+  <div class="content"><p>Overall is self-explanatory. This will control what elements appear on every single page of your webcomic.</p></div>
 
-  <h4 class="title is-4" id="header">Layout CSS</h4>
-
-  <div class="content">
-  <p>All of the CSS is located in the <code class="html">Layout CSS</code> section. It uses <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">CSS variables</a></strong> so that all of your customization stays in one place and you don't have to manually change every line of CSS that shares the same properties.</p>
-
-  <p>These are the default variables you can edit.</p>
-  </div>
-
-  <pre>
-  <code class="html">    :root{ /* learn more about it here: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
-
-      --body-bg-color:#FFF; /*this changes the overall page's background color*/
-      --body-bg-image: url(''); /*add the body image here*/
-      --body-bg-position: center repeat; /*add the body image positioning here*/
-
-      --body-font: BlinkMacSystemFont,-apple-system,&quot;Segoe UI&quot;,Roboto,Oxygen,Ubuntu,Cantarell,&quot;Fira Sans&quot;,&quot;Droid     Sans&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif ; /*change the font-family of the entire site here*/
-      --body-font-size: 16px; /*change the font size of the entire site here*/
-      --body-color:#4a4a4a; /*change the font color of the entire site here*/
-
-      --link-color:#3273dc; /*change the links color here*/
-      --link-hover-color: #363636  /*change the links hover color here*/;
-
-      --banner-image:  url('http://placehold.it/1600x350?text=Banner+Image'); /* replace the background here */
-      --banner-position: center no-repeat;
-      --banner-bg-color: #FFF; /*-- you can change the color of the banner bg here (if using transparent images) */
-      --banner-size: cover; /* this stretches the banner out to cover the whole area */
-      --banner-height: 350px; /*-- you can change the height of the banner here */
-  }</code></pre>
-  &nbsp;
+  <h4 class="title is-4" id="header">Header/Banner</h4>
 
   <div class="content">
-  <p>I've labelled them as thoroughly as possible, but if you still need further assistance, check the forums.</p>
-  </div>
+		<p>By default, there is a header or "banner" for the layout. You can remove it by removing this section:</p>
 
-  <h4 class="title is-4" id="header">Header</h4>
+		<pre><code class="html">&lt;section class=&quot;banner hero is-primary is-medium&quot;&gt;
+  &lt;div class=&quot;hero-body&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+      &lt;p class=&quot;title&quot;&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+	</div>
 
-  <div class="content">&nbsp;</div>
-
-
-	<h4 class="title is-4" id="banner">Banner</h4>
-
-  <div class="content">&nbsp;</div>
-
-
-  <h4 class="title is-4" id="nagivation">Navigation</h4>
+  <h4 class="title is-4" id="nagivation">Menu</h4>
 
   <div class="content">
 		<p>The menu controls the entire navigation, and it appears on every page. By default, the navigation displays the logo, links and then a dropdown featuring your own custom links.</p>
+		<p>You can also change the color of the navigation bar (but requires extra CSS coding), learn it <a href="https://bulma.io/documentation/components/navbar/#colors" target="_blank">here</a>.</p>
 	</div>
 
-
-  <h4 class="title is-4" id="main">Content</h4>
-
-  <div class="content">&nbsp;</div>
-
-  <h4 class="title is-4" id="footer">Footer</h4>
-
-  <div class="content">&nbsp;</div>
-
-  <hr />
-
-  <h4 class="title is-4" id="logo">Logo</h4>
-
-  <div class="content">You can change the logo or remove it all together by deleting this code:</div>
-
-  <pre>
-  <code class="html">  &lt;a class=&quot;navbar-item&quot; href=&quot;/&quot;&gt; &lt;!-- replace the image with your own comic logo --&gt;
-      &lt;img src=&quot;https://nocturnenebula.github.io/sj-layouts/bloomer/logo.png&quot; width=&quot;128&quot; height=&quot;28&quot;&gt;
-    &lt;/a&gt;</code></pre>
-
-  <div class="content">&nbsp;</div>
-
-  <h4 class="title is-4" id="links">Links</h4>
-
-  <div class="content">
-  <p>Links use the menu loops and switches by default, but let's say you want to shorten &quot;Latest Page&quot; to just &quot;Latest&quot; or you don't want to display every custom page. Remove this section:</p>
-
-  <pre>
-  <code>&lt;!-- BEGIN links --&gt;
-    &lt;a class=&quot;navbar-item&quot; href=&quot;{links.URL}&quot;&gt;{links.TEXT}&lt;/a&gt;
-  &lt;!-- END links --&gt;</code></pre>
-
-  <p>And replace it with:</p>
-
-  <pre>
-  <code>   &lt;a class=&quot;navbar-item&quot; href=&quot;/&quot;&gt;Home&lt;/a&gt;
-    &lt;a class=&quot;navbar-item&quot; href=&quot;{FIRST_COMIC_URL}&quot;&gt;First&lt;/a&gt;
-    &lt;a class=&quot;navbar-item&quot; href=&quot;{LATEST_COMIC_URL}&quot;&gt;Latest&lt;/a&gt;
-    &lt;a class=&quot;navbar-item&quot; href=&quot;/archive&quot;&gt;Archive&lt;/a&gt;
-    &lt;a class=&quot;navbar-item&quot; href=&quot;#&quot;&gt;Custom Link 1&lt;/a&gt;
-    &lt;a class=&quot;navbar-item&quot; href=&quot;#&quot;&gt;Custom Link 2&lt;/a&gt;
-    &lt;a class=&quot;navbar-item&quot; href=&quot;#&quot;&gt;Custom Link 3&lt;/a&gt;
-  </code></pre>
-  </div>
-
-  <h4 class="title is-4" id="dropdown">Dropdown</h4>
-
-  <div class="content">If you don't want to use the dropdown, then remove this entire section.</div>
-
-  <pre>
-  <code class="html">&lt;!-- change the link names and add the URLs for the dropdown here --&gt;
-
-           &lt;div class=&quot;navbar-item has-dropdown is-hoverable&quot;&gt;
-             &lt;a class=&quot;navbar-link&quot;&gt;
-               Dropdown &lt;!-- change the name to something like more, further reading, etc. --&gt;
-             &lt;/a&gt;
-
-             &lt;div class=&quot;navbar-dropdown&quot;&gt; &lt;!-- custom outgoing links go here --&gt;
-               &lt;a class=&quot;navbar-item&quot; href=&quot;#your link here&quot;&gt;Link &lt;/a&gt;
-               &lt;a class=&quot;navbar-item&quot; href=&quot;#your link here&quot;&gt;Link &lt;/a&gt;
-               &lt;a class=&quot;navbar-item&quot; href=&quot;#your link here&quot;&gt;Link &lt;/a&gt;
-
-               &lt;hr class=&quot;navbar-divider&quot;&gt;
-
-               &lt;a class=&quot;navbar-item&quot; href=&quot;#your link here&quot;&gt;Separated Link &lt;/a&gt;
-               &lt;a class=&quot;navbar-item&quot; href=&quot;#your link here&quot;&gt;&lt;span class=&quot;icon has-text-danger&quot;&gt;&lt;i class=&quot;fas fa-heart&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;Icon Link&lt;/span&gt;&lt;/a&gt;
-
-
-             &lt;/div&gt;
-            &lt;/div&gt;</code></pre>
-
-  <div class="content">&nbsp;</div>
-
-  <h4 class="title is-4" id="icons">Icons</h4>
-
-  <div class="content">
-  <p>Icons are located in <code class="html">&lt;div class=&quot;navbar-end&quot;&gt;</code>.</p>
-
-  <p>You can add, edit or delete them by removing <code class="html">&lt;p class=&quot;control&quot;&gt; --- HTML, etc. --- &lt;/p&gt;</code>.</p>
-  </div>
-
-  <h4 class="title is-4" id="customizing">Customizing</h4>
-
-  <h5 class="title is-5" id="#color">Color</h5>
-
-  <div class="content">
-  <p>You can also change the color of the navigation bar, learn it <a href="https://bulma.io/documentation/components/navbar/#colors" target="_blank">here</a>.</p>
-  </div>
-  <!-- insert navbar example -->
-
+	<!-- insert navbar example -->
 	<nav class="navbar is-primary has-shadow" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img src="https://nocturnenebula.github.io/cf-layouts/bloomer/images/logo_white.png" width="128" height="28">
-      </a>
+		<div class="navbar-brand">
+			<a class="navbar-item" href="/">
+				<img src="http://bloomer-layout.cfw.me/files/logo_white.png" width="128" height="28">
+			</a>
 
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
+			<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
 
-    <div id="navbar-menu" class="navbar-menu">
-      <div class="navbar-start">
+		<div id="navbar-menu" class="navbar-menu">
+			<div class="navbar-start">
 
-        <a class="navbar-item" href="/">Home</a>
-        <a class="navbar-item" href="/comics/1">First</a>
-        <a class="navbar-item" href="/comics/">Latest</a>
-        <a class="navbar-item" href="/archive/">Archive</a>
-        <a class="navbar-item" href="/blog/">Blog</a>
+				<a class="navbar-item" href="/">Home</a>
+				<a class="navbar-item" href="/comics/1">First</a>
+				<a class="navbar-item" href="/comics/">Latest</a>
+				<a class="navbar-item" href="/archive/">Archive</a>
+				<a class="navbar-item" href="/blog/">Blog</a>
 
-        [l:extrapages]
-          <a class="navbar-item" href="[v:l.link]">[v:l.title]</a>
-        [/]
+				[l:extrapages]
+					<a class="navbar-item" href="[v:l.link]">[v:l.title]</a>
+				[/]
 
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">Links</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item">Link</a>
-            <a class="navbar-item">Link</a>
-            <a class="navbar-item">Link</a>
-            <hr class="navbar-divider">
-            [c:infinitescrollenabled]
-              <a class="navbar-item" href="[v:infinitescrolllink]">Scroll View</a>
-            [/]
-          </div>
-        </div>
-      </div>
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link">Links</a>
+					<div class="navbar-dropdown">
+						<a class="navbar-item">Link</a>
+						<a class="navbar-item">Link</a>
+						<a class="navbar-item">Link</a>
+						<hr class="navbar-divider">
+						[c:infinitescrollenabled]
+							<a class="navbar-item" href="[v:infinitescrolllink]">Scroll View</a>
+						[/]
+					</div>
+				</div>
+			</div>
 
-      <div class="navbar-end">
-        <div class="navbar-item">
-           <div class="field is-grouped">
-            <p class="control">
-                <a href="[v:addsubscriptionlink]" target="_blank"><span class="icon has-text-danger"><i class="fas fa-heart"></i></span></a>
-              </a>
-            </p>
-            <p class="control">
-              <a href="#" target="_blank">
-                <span class="icon"><i class="fab fa-patreon"></i></span>
-              </a>
-            </p>
-            <p class="control">
-              <a href="#" target="_blank">
-                <span class="icon"><i class="fab fa-facebook"></i></span>
-              </a>
-            </p>
-            <p class="control">
-              <a href="#" target="_blank">
-                <span class="icon"><i class="fab fa-twitter"></i></span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-</nav>
-
-<nav class="navbar is-dark has-shadow" role="navigation" aria-label="main navigation">
+			<div class="navbar-end">
+				<div class="navbar-item">
+					 <div class="field is-grouped">
+						<p class="control">
+								<a href="[v:addsubscriptionlink]" target="_blank"><span class="icon has-text-danger"><i class="fas fa-heart"></i></span></a>
+						</p>
+						<p class="control">
+							<a href="#" target="_blank">
+								<span class="icon"><i class="fab fa-patreon"></i></span>
+							</a>
+						</p>
+						<p class="control">
+							<a href="#" target="_blank">
+								<span class="icon"><i class="fab fa-facebook"></i></span>
+							</a>
+						</p>
+						<p class="control">
+							<a href="#" target="_blank">
+								<span class="icon"><i class="fab fa-twitter"></i></span>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<br />
+	<nav class="navbar is-dark has-shadow" role="navigation" aria-label="main navigation">
 	<div class="navbar-brand">
 		<a class="navbar-item" href="/">
-			<img src="https://nocturnenebula.github.io/cf-layouts/bloomer/images/logo_white.png" width="128" height="28">
+			<img src="http://bloomer-layout.cfw.me/files/logo_white.png" width="128" height="28">
 		</a>
 
 		<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -398,7 +280,6 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 				 <div class="field is-grouped">
 					<p class="control">
 							<a href="[v:addsubscriptionlink]" target="_blank"><span class="icon has-text-danger"><i class="fas fa-heart"></i></span></a>
-						</a>
 					</p>
 					<p class="control">
 						<a href="#" target="_blank">
@@ -419,97 +300,204 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 			</div>
 		</div>
 	</div>
-</nav>
-  <!-- end navbar example -->
+	</nav>
+	<!-- end navbar example -->
+
+<br />
+
+	<h4 class="title is-4" id="logo">Logo</h4>
+
+	<div class="content"><p>You can change the logo or remove it all together by deleting this code:</p>
+
+	<pre><code class="html">&lt;a class=&quot;navbar-item&quot; href=&quot;/&quot;&gt;
+	&lt;img src=&quot;http://bloomer-layout.cfw.me/files/logo.png&quot; width=&quot;128&quot; height=&quot;28&quot;&gt;
+&lt;/a&gt;</code></pre>
+
+	</div>
+
+	<h4 class="title is-4" id="links">Links</h4>
+
+	<div class="content">
+	<p>By default, the links for the navigation are Home, First (comic), Latest (comic), Archive, Blog, and then your extra web pages. There is also a dropdown for outgoing links and for the scroll view, which is located in the next section. You can edit, delete or add more links by editing this section:</p>
+
+	<pre><code class="html">&lt;div id=&quot;navbar-menu&quot; class=&quot;navbar-menu&quot;&gt;
+      &lt;div class=&quot;navbar-start&quot;&gt;
+
+        &lt;a class=&quot;navbar-item&quot; href=&quot;/&quot;&gt;Home&lt;/a&gt;
+        &lt;a class=&quot;navbar-item&quot; href=&quot;/comics/1&quot;&gt;First&lt;/a&gt;
+        &lt;a class=&quot;navbar-item&quot; href=&quot;/comics/&quot;&gt;Latest&lt;/a&gt;
+        &lt;a class=&quot;navbar-item&quot; href=&quot;/archive/&quot;&gt;Archive&lt;/a&gt;
+        &lt;a class=&quot;navbar-item&quot; href=&quot;/blog/&quot;&gt;Blog&lt;/a&gt;
+
+        &#91;l:extrapages]
+          &lt;a class=&quot;navbar-item&quot; href=&quot;[v:l.link]&quot;&gt;[v:l.title]&lt;/a&gt;
+        &#91;/]
+      &lt;/div&gt;
+		&lt;/div&gt;</code></pre>
+	</div>
+
+
+	<h4 class="title is-4" id="dropdown">Dropdown</h4>
+
+	<div class="content"><p>The dropdown helps save you space from all those extra pages, and to provide outgoing links. If you don't want to use the dropdown, then remove this entire section.</p>
+
+	<pre>
+	<code class="html">&lt;div class=&quot;navbar-item has-dropdown is-hoverable&quot;&gt;
+		&lt;a class=&quot;navbar-link&quot;&gt;Links&lt;/a&gt;
+		&lt;div class=&quot;navbar-dropdown&quot;&gt;
+			&lt;a class=&quot;navbar-item&quot;&gt;Link&lt;/a&gt;
+			&lt;a class=&quot;navbar-item&quot;&gt;Link&lt;/a&gt;
+			&lt;a class=&quot;navbar-item&quot;&gt;Link&lt;/a&gt;
+			&lt;hr class=&quot;navbar-divider&quot;&gt;
+			[c:infinitescrollenabled]
+				&lt;a class=&quot;navbar-item&quot; href=&quot;&#91;v:infinitescrolllink]&quot;&gt;Scroll View&lt;/a&gt;
+			[/]
+		&lt;/div&gt;
+	&lt;/div&gt;
+	</code></pre>
+
+	</div>
+
+	<h4 class="title is-4" id="icons">Icons</h4>
+
+	<div class="content">
+	<p>All of the icons are hosted through <a href="https://fontawesome.com" target="_blank">Fontawesome.</a> Icons are located in <code class="html">&lt;div class=&quot;navbar-end&quot;&gt;</code>, but they can be added anywhere onto your layout.</p>
+
+	<p>You can edit or copy the icons by changing any of the sections that look like this:</p>
+
+	<pre><code class="html">&lt;p class=&quot;control&quot;&gt;
+	&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;
+		&lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fab fa-patreon&quot;&gt;&lt;i&gt;&lt;/span&gt;
+	&lt;/a&gt;
+&lt;/p&gt;</code></pre>
+
+	<p>You can also delete the ones you don't want! Just remove the entire <code class="html">p</code> block.</p>
+
+	<p>To change the icon, look for any section that looks like <code class="html">&lt;i class=&quot;fab fa-brandname&quot;&gt;&lt;/i&gt;</code>. Change the link, and then you can start looking for the right brand icon here: <a href="https://fontawesome.com/icons?d=gallery&s=brands" target="_blank">https://fontawesome.com/icons?d=gallery&s=brands</a></p>
+
+	<p>Sometimes they won't have the brand you're looking for, so you'll have to compensate. Like for example, you can use a <i class="fas fa-paw"></i> paw for FurAffinity.</p>
+
+
+	</div>
+
+
+  <h4 class="title is-4" id="content">Content</h4>
+
+  <div class="content"><p>There is an itty bitty code for the content that looks like this:</p>
+
+	<pre><code class="html">&#91;c:isextrapage&#93;
+	&lt;h2 class=&quot;title is-2&quot;&gt;&#91;v:pagetitle&#93;&lt;/h2&gt;
+	&#91;/&#93;
+&lt;!--layout:[content]--&gt;</code></pre>
+
+ 	<p><code class="html">&lt;h2 class=&quot;title is-2&quot;&gt;&#91;v:pagetitle&#93;&lt;/h2&gt;</code> is what adds a title to every extra page you make. If you don't want to use it then just remove that entire line of code.
+
+	</div>
+
+  <h4 class="title is-4" id="footer">Footer</h4>
+
+  <div class="content">
+		<p>The footer is very simple and it's at the bottom of every page. It's best to edit it in order to include your own copyright info and author name:</p>
+		<pre><code class="html">&lt;footer class=&quot;footer has-text-centered&quot;&gt;
+      &lt;div class=&quot;content&quot;&gt;
+        &lt;p&gt;&amp;#169; Name(s) Year-Year. All rights reserved.
+        &lt;p&gt;Made by &lt;a href=&quot;https://comicfury.com/profile.php?username=nocturnenebula&quot; target=&quot;_blank&quot;&gt;nocturnenebula&lt;/a&gt; with &lt;a href=&quot;https://bulma.io&quot; target=&quot;_blank&quot;&gt;Bulma&lt;/a&gt;. | Hosted on &lt;a href=&quot;https://comicfury.com/&quot; target=&quot;_blank&quot;&gt;Comic Fury&lt;span class=&quot;subtle&quot;&gt; Webcomic Hosting&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/footer&gt;</code></pre>
+
+	</div>
+
+	<h4 class="title is-4" id="layout-css">Layout CSS</h4>
+
+  <div class="content">
+  <p>All of the CSS is located in the <code class="html">Layout CSS</code> section. It uses <strong><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank">CSS variables</a></strong> so that all of your customization stays in one place and you don't have to manually change every line of CSS that shares the same properties.</p>
+
+  <p>These are the default variables you can edit:</p>
+
+  <pre>
+  <code class="html">    :root{ /* learn more about it here: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+
+	--body-bg-color:#FFF; /*this changes the overall page's background color*/
+	--body-bg-image: url(''); /*add the body image here*/
+	--body-bg-position: center repeat; /*add the body image positioning here*/
+
+	--body-font: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid     Sans","Helvetica Neue",Helvetica,Arial,sans-serif ; /*change the font-family of the entire site here*/
+	--body-font-size: 16px; /*change the font size of the entire site here*/
+	--body-color:#4a4a4a; /*change the font color of the entire site here*/
+
+	--link-color:#3273dc; /*change the links color here*/
+	--link-hover-color: #363636;  /*change the links hover color here*/
+
+	--banner-bg-color: #FFF; /*-- you can change the color of the banner bg here (if using transparent images) */
+	--banner-image:  url('http://placehold.it/1600x350/00d1b2/FFFFFF/?text=Banner+Image'); /* replace the background here */
+	--banner-position: center; /*-- by default, the banner is centered. this is where you can change it --*/
+	--banner-repeat: no-repeat; /*-- by default, it's set not to repeat. you can change it to repeat, repeat-x, repeat-y, etc. --*/
+	--banner-size: cover; /* this stretches the banner out to cover the whole area */
+	--banner-height: 350px; /*-- you can change the height of the banner here */
+	}</code></pre>
+
+		<p>I've labelled them as thoroughly as possible, but if you still need further assistance, check the forums.</p>
+	</div>
+
+	<h4 class="title is-4" id="comic-navigation">Customizing</h4>
+
+	<div class="content"><p>WIP.</p></div>
 
   <hr />
-  <h3 class="title is-3">Overview</h3>
 
-  <div class="content">&nbsp;</div>
 
-  <h4 class="title is-4">Description</h4>
+	<h3 class="title is-3" id="comic">Comic Page</h3>
 
-  <div class="content">&nbsp;</div>
+	<div class="content">&nbsp;</div>
 
-  <h4 class="title is-4">First/Latest Page</h4>
+	<h4 class="title is-4" id="comic-navigation">Comic Navigation</h4>
 
-  <div class="content">&nbsp;</div>
+	<div class="content">
+	<p>&nbsp;</p>
+	</div>
 
-  <h4 class="title is-4">News Feed</h4>
+	<h4 class="title is-4" id="comic-page">Comic Page Image</h4>
 
-  <div class="content">&nbsp;</div>
+	<div class="content">
+	<p>&nbsp;</p>
+	</div>
+
+	<h4 class="title is-4" id="comic-comments">Comic Comments</h4>
+
+	<div class="content">
+	<p>&nbsp;</p>
+	</div>
+
+	<hr />
+	<h3 class="title is-3" id="comic-archive">Archive</h3>
+
+	<div class="content">
+		<p><strong>Archive</strong> is where all of your comics are listed in a table. There's not much to customize in this section, but you're welcome to edit it.</p>
+	</div>
+
+  <h3 class="title is-3" id="overview">Overview</h3>
+  <div class="content">
+		<p><strong>Overview</strong> is an optional page for the front page of your comic. By default, it's not activated and so you'll need to activate it by going to your webcomic's <b>Manage > Edit Settings > Front page</b>.</p>
+	</div>
 
   <hr />
-  <h3 class="title is-3" id="news-archive">News Archive</h3>
+  <h3 class="title is-3" id="search">Search</h3>
 
-  <div class="content">&nbsp;</div>
+  <div class="content"><p><b>Search</b> is the landing page for any search results.</p></div>
 
-  <h4 class="title is-4" id="news-archive-article">News Article</h4>
+	<h3 class="title is-3" id="blog-archive">Blog Archive</h3>
 
-  <div class="content">
-  <p>&nbsp;</p>
+  <div class="content"><p><b>Blog Archive</b> controls the appearance of the list of blog posts.</p></div>
 
-  <h4 class="title is-4" id="news-archive-toc">Table of Contents</h4>
+	<h3 class="title is-3" id="blog-display">Blog Display</h3>
 
-  <div class="content">
-  <p>&nbsp;</p>
+	<div class="content">
+		<p><b>Blog Display</b> controls a blog post's appearance.</p>
+	</div>
 
-  <h4 class="title is-4" id="news-archive-comments">Comments</h4>
-
-  <div class="content">
-  <p>&nbsp;</p>
-
-  <hr />
-  <h3 class="title is-3" id="comic">Comic Page</h3>
-
-  <div class="content">&nbsp;</div>
-
-  <h4 class="title is-4" id="comic-navigation">Comic Navigation</h4>
-
-  <div class="content">
-  <p>&nbsp;</p>
-
-  <h4 class="title is-4" id="comic-page">Comic Page (Page)</h4>
-
-  <div class="content">
-  <p>&nbsp;</p>
-
-  <h4 class="title is-4" id="comic-comments">Comic Comments</h4>
-
-  <div class="content">
-  <p>&nbsp;</p>
-
-  <hr />
-  <h3 class="title is-3" id="comic-archive">Comic Archive</h3>
-
-  <div class="content">&nbsp;</div>
-  Default Version
-
-  <div class="content">
-  <p>&nbsp;</p>
-  </div>
-
-  <h4 class="title is-4" id="comic-archive-alternate">Customizing</h4>
-
-  <div class="content">
-  <p>&nbsp;</p>
-  </div>
-
-  <hr />
-  <h3 class="title is-3" id="custom-page">Custom Page</h3>
-
-  <div class="content">&nbsp;</div>
-
-  <h4 class="title is-4" id="custom-page-default">Default</h4>
-
-  <div class="content">
-  <p>&nbsp;</p>
-  </div>
-
-  <h4 class="title is-4" id="custom-page-extra">Extra</h4>
-
-  <div class="content">
-  <p>&nbsp;</p>
-  </div>
+	<h3 class="title is-3" id="error">Error Page</h3>
+		<div class="content">
+			<p>Self-explanatory. This is what will show up when someone reaches a page that doesn't exist (or some other error-related reason).</p>
+	</div>
 
 </div>

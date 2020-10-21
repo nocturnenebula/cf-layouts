@@ -37,14 +37,14 @@
         [/]
 
   <link rel="alternate" type="application/rss+xml" title="[v:webcomicname] RSS" href="[v:webcomicurl]/rss/">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/73fc00f64d.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript">
 
     var cdata = {};
@@ -59,11 +59,10 @@
 <!-- navigation goes here, this appears on every page -->
 
   <header>
-<section class="hero is-primary is-medium">
+<section class="banner hero is-primary is-medium">
   <div class="hero-body">
     <div class="container">
       <p class="title">
-        your header image
       </p>
     </div>
   </div>
@@ -72,7 +71,7 @@
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
-        <img src="https://nocturnenebula.github.io/cf-layouts/bloomer/images/logo.png" width="128" height="28">
+        <img src="http://bloomer-layout.cfw.me/files/logo.png" width="128" height="28">
       </a>
 
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -111,10 +110,26 @@
 
       <div class="navbar-end">
         <div class="navbar-item">
+            [c:searchon]
+                <div class="field">
+                    <form method="post" action="/search/">
+                    <p class="control has-icons-right">
+                      <input class="input" type="text" name="search" value="Search..." onclick="this.value = '';">
+                      <span class="icon is-small is-right">
+                        <i class="fas fa-search"></i>
+                        </span>
+                    </p>
+                    </form>
+                </div>
+            [/]
+
+        </div>
+
+
+        <div class="navbar-item">
            <div class="field is-grouped">
             <p class="control">
                 <a href="[v:addsubscriptionlink]" target="_blank"><span class="icon has-text-danger"><i class="fas fa-heart"></i></span></a>
-              </a>
             </p>
             <p class="control">
               <a href="#" target="_blank">
@@ -146,13 +161,23 @@
         [c:isextrapage]
             <h2 class="title is-2">[v:pagetitle]</h2>
         [/]
-    <!--layout:[content]-->
+        <!--layout:[content]-->
+
+        <!-- cf ads -->
+          [c:bannerads]
+              <!-- voluntary CF support ads, you can turn these off in your webcomic settings -->
+              <div id="cf_ads">[v:banneradcode]</div>
+          [/]
+        <!-- end cf ads -->
         </div>
       </section>
     </main>
 
     <footer class="footer has-text-centered">
-      Powered by <a href="https://comicfury.com/" target="_blank">Comic Fury<span class="subtle"> Webcomic Hosting</span></a>
+      <div class="content">
+        <p>&#169; username(s) Year-Year. All rights reserved.
+        <p>Made by <a href="https://comicfury.com/profile.php?username=nocturnenebula" target="_blank">nocturnenebula</a> with <a href="https://bulma.io" target="_blank">Bulma</a> | Hosted on <a href="https://comicfury.com/" target="_blank">Comic Fury<span class="subtle"> Webcomic Hosting</span></a></p>
+      </div>
     </footer>
 
 

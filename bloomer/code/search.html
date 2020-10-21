@@ -1,34 +1,14 @@
-[c:searched]
-    <h2 class="heading">Search</h2>
-    <div class="box">
-        [c:!foundresults]
-            <b>Error:</b> Sorry, but there were no results for your search.
-        [/]
-
-        [c:foundresults]
-            <table id="archive">
-                <tr class="chaptertitle">
-                    <td colspan="3">
-                        <h3>Results</h3>
-                    </td>
-                </tr>
-
-                [l:searchresults]
-                    <tr class="archivecomic">
-                        <td class="comicnumber">
-                            [v:l.number].
-                        </td>
-
-                        <td>
-                            <a href="[v:l.comicurl]">[v:l.comictitle]</a>
-                        </td>
-
-                        <td class="comicposttime">
-                            [v:l.posttime]
-                        </td>
-                    </tr>
+<h2 class="title is-2">Search Results</h2>
+<div class="content">
+            [c:searched]
+                [c:!foundresults]
+                    <p>Oops, looks like we didn't find anything. Try again!</p>
                 [/]
-            </table>
-        [/]
-    </div>
-[/]
+
+                [c:foundresults]
+                    [l:searchresults]
+                        <p>[v:l.number]. <a href="[v:l.comicurl]">[v:l.comictitle]</a> - <small>[v:l.posttime]</small></p>
+                    [/]
+                [/]
+            [/]
+</div>
