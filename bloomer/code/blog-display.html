@@ -4,7 +4,7 @@
 				<h2 class="title">[v:blogtitle]</h2>
 				<strong>by <a href="[v:profilelink]">[v:authorname]</a></strong> <small>[v:posttime]</small>
 
-						<div class="content">
+						<div class="content mt-5">
 							[v:blog]
 						</div>
 			</div>
@@ -23,11 +23,20 @@
 
 <hr />
 
-<h2 class="title">Reader's Comments</h2>
+<h2 class="title">Comments</h2>
+
+
+	[c:allowcomments]
+		<div class="commentform">
+			[v:commentform]
+		</div>
+
+	[/]
+
 
 [c:comments]
 		[l:comments]
-		<div class="box">
+		<div class="box [c:l.depth<=4]reply[v:l.depth][/][c:l.depth>4]reply5[/]">
 			<article class="media">
 				<div class="media-left">
 					<figure class="image is-64x64">
@@ -36,9 +45,8 @@
 				</div>
 				<div class="media-content">
 					<div class="content">
-					    <h3>[v:l.commenttitle]</h3>
 						<p>
-							<a href="[v:l.profilelink]"><strong>[v:l.authorname]</strong></a> <small>[v:l.posttime]</small>
+							<strong>[v:l.commenttitle]</strong> <small><a href="[v:l.profilelink]">[v:l.authorname]</a></small> <small>[v:l.posttime]</small>
 							<br>
 							[v:l.comment]
 						</p>

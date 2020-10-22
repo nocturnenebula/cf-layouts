@@ -1,7 +1,26 @@
-<div class="comic-header has-text-centered	">
+<div class="comic-header has-text-centered mb-5">
 	<h1 class="title">[v:comictitle]</h1>
 	<div class="comic-date">[v:posttime]</div>
 </div>
+
+
+<div class="comic-nav has-text-centered">
+	<div class="columns is-mobile">
+	  <div class="column">
+	    <a href="/comics/1"><i class="fas fa-angle-double-left fa-2x"></i> <span>First</span></a>
+	  </div>
+	  <div class="column">
+	    <a href="[v:prevcomic]"><i class="fas fa-angle-left fa-2x"></i> <span>Previous</span></a>
+	  </div>
+	  <div class="column">
+	    <a href="[v:nextcomic]"><span>Next</span> <i class="fas fa-angle-right fa-2x"></i></a>
+	  </div>
+	  <div class="column">
+	    <a href="/comics/"><span>Latest</span> <i class="fas fa-angle-double-right fa-2x"></i></a>
+	  </div>
+	</div>
+</div>
+
 
 <div class="comic-image has-text-centered	">
   <figure class="comic">[v:comicimage]</figure>
@@ -38,7 +57,7 @@
 		      <div class="media-content">
 			      <div class="content">
 			        <p>
-			          <a href="[v:l.profilelink]"><strong>[v:l.authorname]</strong></a> <small>[v:l.posttime]</small>
+			          <strong>[v:l.commenttitle]</strong> <small><a href="[v:l.profilelink]">[v:l.authorname]</a></small> <small>[v:l.posttime]</small>
 			          <br>
 								[v:l.comment]
 			        	</p>
@@ -66,11 +85,12 @@
 		<div class="commentform">
 			[v:commentform]
 		</div>
+
 	[/]
 
 	[c:comments]
 		[l:comments]
-		<div class="box">
+		<div class="box [c:l.depth<=4]reply[v:l.depth][/][c:l.depth>4]reply5[/]">
 			<article class="media">
 				<div class="media-left">
 					<figure class="image is-64x64">
@@ -80,7 +100,7 @@
 				<div class="media-content">
 					<div class="content">
 						<p>
-							<a href="[v:l.profilelink]"><strong>[v:l.authorname]</strong></a> <small>[v:l.posttime]</small>
+							<strong>[v:l.commenttitle]</strong> <small><a href="[v:l.profilelink]">[v:l.authorname]</a></small> <small>[v:l.posttime]</small>
 							<br>
 							[v:l.comment]
 						</p>
