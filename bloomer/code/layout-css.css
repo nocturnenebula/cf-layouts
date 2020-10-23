@@ -2,22 +2,35 @@
 
 --body-bg-color:#FFF; /*this changes the overall page's background color*/
 --body-bg-image: url(''); /*add the body image here*/
---body-bg-position: center repeat; /*add the body image positioning here*/
-
---body-font: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid     Sans","Helvetica Neue",Helvetica,Arial,sans-serif ; /*change the font-family of the entire site here*/
+--body-bg-position: center; /*add the body image positioning here. this can be two values (ex: top center) */
+--body-bg-repeat: repeat; /* add the body image repeatability here. you can change it to repeat, repeat-x, repeat-y, etc. */
+--body-bg-size: contain; /*this changes how you want the bg image to stretch out. */
+--body-font: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif ; /*change the font-family of the entire site here*/
 --body-font-size: 16px; /*change the font size of the entire site here*/
---body-color:#4a4a4a; /*change the font color of the entire site here*/
+--body-color: #4a4a4a; /*change the font color of the entire site here*/
 
---link-color:#3273dc; /*change the links color here*/
---link-hover-color: #363636;  /*change the links hover color here*/
+--link:#3273dc; /*change the links color here*/
+--link-hover: #363636;  /*change the links hover color here*/
 
---banner-bg-color: #FFF; /*-- you can change the color of the banner bg here (if using transparent images) */
+--banner-bg-color: #00d1b2; /*-- you can change the color of the banner bg here (if using transparent images) */
 --banner-image:  url('http://placehold.it/1600x350/00d1b2/FFFFFF/?text=Banner+Image'); /* replace the background here */
 --banner-position: center; /*-- by default, the banner is centered. this is where you can change it --*/
 --banner-repeat: no-repeat; /*-- by default, it's set not to repeat. you can change it to repeat, repeat-x, repeat-y, etc. --*/
 --banner-size: cover; /* this stretches the banner out to cover the whole area */
 --banner-height: 350px; /*-- you can change the height of the banner here */
+
+--comic-nav: #4a4a4a; /*This changes the color of the comic navigation! */
+--comic-nav-hover: #777; /*This is what it changes to when you hover over it! */
+
+--footer-bg-color: #fafafa; /* this changes the footer's background color */
+--footer-bg-image: url(''); /* changes the footer background image */
+--footer-bg-position: top center; /* changes the positioning of the background image */
+--footer-bg-repeat: repeat;
+--footer-bg-size: contain;
+--footer-link: #3273dc;
+--footer-link-hover: #363636;
 }
+
 
 html, body{
 min-height:100vh;
@@ -28,13 +41,54 @@ hr:last-child {
     display: none;
 }
 
+/* You don't have to change anything here! Change the variables up top in the :root section. */
+
+body{
+  background: var(--body-bg-color) var(--body-image-bg) var(--body-bg-position) var(--body-bg-repeat) !important;
+  background-size: var(--body-bg-size);
+  font-family: var(--body-font) !important;
+  color: var(--body-color) !important;
+  font-size: var(--font-size) !important;
+}
+
+a{
+  color: var(--link);
+}
+
+    a:hover{
+      color: var(--link-hover);
+    }
+
 .banner{
-  background: var(--banner-image);
-  background-position: var(--banner-position);
-  background-repeat: var(--banner-repeat);
+  background: var(--banner-bg-color) var(--banner-image) var(--banner-position) var(--banner-repeat) !important;
   background-size: var(--banner-size);
   height: var(--banner-height);
 }
+
+.comic-nav a{
+  color: var(--comic-nav);
+}
+
+    .comic-nav a:hover{
+      color: var(--comic-nav-hover);
+    }
+
+.footer{
+  background: var(--footer-bg-color) var(--footer-bg-image) var(--footer-bg-position) var(--footer-bg-repeat) !important;
+  background-size: var(--footer-bg-size);
+}
+
+    .footer a{
+      color: var(--footer-link);
+    }
+
+    .footer a:hover{
+      color: var(--footer-link-hover);
+    }
+
+
+/* Some other cosmetic changes... */
+
 
 .pushed-up{
     margin-top: -6em;
@@ -44,12 +98,12 @@ hr:last-child {
     margin-left: .6em;
 }
 
+
 #latestcomicimage{
     box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
     max-width:350px;
 }
 
-/* Some comic page cosmetics..... */
 
 .comic-nav span {
     position: relative;
@@ -57,19 +111,29 @@ hr:last-child {
     padding: 0 1em;
 }
 
-.comic-nav a{
-  color: var(--body-color);
+.reply1{
+    margin-left: 2em;
 }
 
-.comic-nav a:hover{
-  color: #777;
+.reply2{
+    margin-left: 4em;
 }
 
+.reply3{
+    margin-left: 6em;
+}
+
+.reply4{
+    margin-left: 8em;
+}
+
+.reply5{
+    margin-left: 10em;
+}
 /* Mobile support cosmetic changes... */
 
 @media screen and (max-width: 768px){
   .comic-nav span{
     display: none;
   }
-
 }

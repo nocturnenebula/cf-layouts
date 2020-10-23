@@ -9,21 +9,354 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <h3 class="subtitle is-4">Quick and Easy Installation</h3>
 
 <div class="content">
-<p>Coming soon!</p>
+<p>First, go to your Webcomic's management page > <strong>Edit Layout</strong>. Copy and paste the codes into the corresponding tabs:</p>
 </div>
-
-<div class="columns">
-
-  <div class="column">
 
     <h3 class="title">Overall</h3>
     <div class="content">
-      <pre><code class="html"></code></pre>
+      <pre><code class="html">&lt;!doctype html>
+
+      &lt;html lang="en">
+      &lt;head>
+
+        &lt;meta charset="utf-8">
+
+        &lt;title>&#91;v:webcomicname] | &#91;v:pagetitle]&lt;/title>
+
+              &lt;style type="text/css">
+                  &lt;!--layout:&#91;css]-->
+              &lt;/style>
+              &lt;script type="text/javascript" src="&#91;v:cfscriptlink]">&lt;/script>
+              &#91;c:iscomicpage]
+                  &lt;script type="text/javascript">
+                      activateKeyboardNavigation("&#91;v:prevcomicjs]", "&#91;v:nextcomicjs]", "ArrowLeft", "ArrowRight");
+                  &lt;/script>
+              &#91;/]
+
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+        &lt;meta name="Description" content="&#91;v:webcomicdescription]">
+                &#91;c:iscomicpage]
+                  &lt;meta property="og:type" content="website" />
+                  &lt;meta property="og:title" content="&#91;v:webcomicname]" />
+                  &lt;meta property="og:description" content="&#91;v:pagetitle]" />
+                  &lt;meta property="og:url" content="&#91;v:permalink]" />
+                  &lt;meta name="twitter:card" content="summary_large_image" />
+                  &lt;meta name="twitter:title" content="&#91;v:webcomicname]" />
+                  &lt;meta name="twitter:description" content="&#91;v:pagetitle]" />
+
+                  &#91;c:comicimagetype=image]
+                      &lt;meta property="og:image" content="&#91;v:comicimageurl]" />
+                      &lt;meta property="og:image:width" content="&#91;v:comicwidth]" />
+                      &lt;meta property="og:image:height" content="&#91;v:comicheight]" />
+                      &lt;meta name="twitter:image" content="&#91;v:comicimageurl]" />
+                  &#91;/]
+              &#91;/]
+
+        &lt;link rel="alternate" type="application/rss+xml" title="&#91;v:webcomicname] RSS" href="&#91;v:webcomicurl]/rss/">
+        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+        &lt;!--&#91;if lt IE 9]>
+        &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">&lt;/script>
+        &lt;!&#91;endif]-->
+
+      &lt;script src="https://kit.fontawesome.com/73fc00f64d.js" crossorigin="anonymous">&lt;/script>
+      &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">&lt;/script>
+
+      &lt;/head>
+
+      &lt;body role="document">
+
+
+      &lt;!-- navigation goes here, this appears on every page -->
+
+        &lt;header>
+      &lt;section class="banner hero is-primary is-medium">
+        &lt;div class="hero-body">
+          &lt;div class="container">
+            &lt;p class="title">
+            &lt;/p>
+          &lt;/div>
+        &lt;/div>
+      &lt;/section>
+          &lt;nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+        &lt;div class="container">
+          &lt;div class="navbar-brand">
+            &lt;a class="navbar-item" href="/">
+              &lt;img src="https://nocturnenebula.github.io/cf-layouts/bloomer/images/logo.png" width="128" height="28">
+            &lt;/a>
+
+            &lt;a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              &lt;span aria-hidden="true">&lt;/span>
+              &lt;span aria-hidden="true">&lt;/span>
+              &lt;span aria-hidden="true">&lt;/span>
+            &lt;/a>
+          &lt;/div>
+
+          &lt;div id="navbar-menu" class="navbar-menu">
+            &lt;div class="navbar-start">
+
+              &lt;a class="navbar-item" href="/">Home&lt;/a>
+              &lt;a class="navbar-item" href="/comics/1">First&lt;/a>
+              &lt;a class="navbar-item" href="/comics/">Latest&lt;/a>
+              &lt;a class="navbar-item" href="/archive/">Archive&lt;/a>
+              &lt;a class="navbar-item" href="/blog/">Blog&lt;/a>
+
+              &#91;l:extrapages]
+                &lt;a class="navbar-item" href="&#91;v:l.link]">&#91;v:l.title]&lt;/a>
+              &#91;/]
+
+              &lt;div class="navbar-item has-dropdown is-hoverable">
+                &lt;a class="navbar-link">Links&lt;/a>
+                &lt;div class="navbar-dropdown">
+                  &lt;a class="navbar-item">Link&lt;/a>
+                  &lt;a class="navbar-item">Link&lt;/a>
+                  &lt;a class="navbar-item">Link&lt;/a>
+                  &lt;hr class="navbar-divider">
+                  &#91;c:infinitescrollenabled]
+                    &lt;a class="navbar-item" href="&#91;v:infinitescrolllink]">Scroll View&lt;/a>
+                  &#91;/]
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+
+            &lt;div class="navbar-end">
+              &lt;div class="navbar-item">
+                  &#91;c:searchon]
+                      &lt;div class="field">
+                          &lt;form method="post" action="/search/">
+                          &lt;p class="control has-icons-right">
+                            &lt;input class="input" type="text" name="search" value="Search..." onclick="this.value = '';">
+                            &lt;span class="icon is-small is-right">
+                              &lt;i class="fas fa-search">&lt;/i>
+                              &lt;/span>
+                          &lt;/p>
+                          &lt;/form>
+                      &lt;/div>
+                  &#91;/]
+
+              &lt;/div>
+
+
+              &lt;div class="navbar-item">
+                 &lt;div class="field is-grouped">
+                  &lt;p class="control">
+                      &lt;a href="&#91;v:addsubscriptionlink]" target="_blank">&lt;span class="icon has-text-danger">&lt;i class="fas fa-heart">&lt;/i>&lt;/span>&lt;/a>
+                  &lt;/p>
+                  &lt;p class="control">
+                    &lt;a href="#" target="_blank">
+                      &lt;span class="icon">&lt;i class="fab fa-patreon">&lt;/i>&lt;/span>
+                    &lt;/a>
+                  &lt;/p>
+                  &lt;p class="control">
+                    &lt;a href="#" target="_blank">
+                      &lt;span class="icon">&lt;i class="fab fa-facebook">&lt;/i>&lt;/span>
+                    &lt;/a>
+                  &lt;/p>
+                  &lt;p class="control">
+                    &lt;a href="#" target="_blank">
+                      &lt;span class="icon">&lt;i class="fab fa-twitter">&lt;/i>&lt;/span>
+                    &lt;/a>
+                  &lt;/p>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/nav>
+
+      &lt;/header>
+
+        &lt;main>
+          &lt;section class="section">
+            &lt;div class="container">
+              &#91;c:isextrapage]
+                  &lt;h2 class="title is-2">&#91;v:pagetitle]&lt;/h2>
+              &#91;/]
+              &lt;!--layout:&#91;content]-->
+
+              &lt;!-- cf ads -->
+                &#91;c:bannerads]
+                    &lt;!-- voluntary CF support ads, you can turn these off in your webcomic settings -->
+                    &lt;div id="cf_ads">&#91;v:banneradcode]&lt;/div>
+                &#91;/]
+              &lt;!-- end cf ads -->
+              &lt;/div>
+            &lt;/section>
+          &lt;/main>
+
+          &lt;footer class="footer has-text-centered">
+            &lt;div class="content">
+              &lt;p>&#169; username(s) Year-Year. All rights reserved.
+              &lt;p>Made by &lt;a href="https://comicfury.com/profile.php?username=nocturnenebula" target="_blank">nocturnenebula&lt;/a> with &lt;a href="https://bulma.io" target="_blank">Bulma&lt;/a> | Hosted on &lt;a href="https://comicfury.com/" target="_blank">Comic Fury&lt;span class="subtle"> Webcomic Hosting&lt;/span>&lt;/a>&lt;/p>
+            &lt;/div>
+          &lt;/footer>
+
+
+          &lt;script type="text/javascript">
+            $(document).ready(function() {
+
+              // Check for click events on the navbar burger icon
+              $(".navbar-burger").click(function() {
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+              });
+            });
+          &lt;/script>
+
+        &lt;/body>
+
+        &lt;/html>
+
+</code></pre>
     </div>
 
-    <h3 class="title">Layout</h3>
+    <h3 class="title">Layout CSS</h3>
     <div class="content">
-      <pre><code class="css"></code></pre>
+      <pre><code class="css">:root{ /* learn more about it here: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+
+--body-bg-color:#FFF; /*this changes the overall page's background color*/
+--body-bg-image: url(''); /*add the body image here*/
+--body-bg-position: center; /*add the body image positioning here. this can be two values (ex: top center) */
+--body-bg-repeat: repeat; /* add the body image repeatability here. you can change it to repeat, repeat-x, repeat-y, etc. */
+--body-bg-size: contain; /*this changes how you want the bg image to stretch out. */
+--body-font: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif ; /*change the font-family of the entire site here*/
+--body-font-size: 16px; /*change the font size of the entire site here*/
+--body-color: #4a4a4a; /*change the font color of the entire site here*/
+
+--link:#3273dc; /*change the links color here*/
+--link-hover: #363636;  /*change the links hover color here*/
+
+--banner-bg-color: #00d1b2; /*-- you can change the color of the banner bg here (if using transparent images) */
+--banner-image:  url('http://placehold.it/1600x350/00d1b2/FFFFFF/?text=Banner+Image'); /* replace the background here */
+--banner-position: center; /*-- by default, the banner is centered. this is where you can change it --*/
+--banner-repeat: no-repeat; /*-- by default, it's set not to repeat. you can change it to repeat, repeat-x, repeat-y, etc. --*/
+--banner-size: cover; /* this stretches the banner out to cover the whole area */
+--banner-height: 350px; /*-- you can change the height of the banner here */
+
+--comic-nav: #4a4a4a; /*This changes the color of the comic navigation! */
+--comic-nav-hover: #777; /*This is what it changes to when you hover over it! */
+
+--footer-bg-color: #fafafa; /* this changes the footer's background color */
+--footer-bg-image: url(''); /* changes the footer background image */
+--footer-bg-position: top center; /* changes the positioning of the background image */
+--footer-bg-repeat: repeat;
+--footer-bg-size: contain;
+--footer-link: #3273dc;
+--footer-link-hover: #363636;
+}
+
+
+html, body{
+min-height:100vh;
+}
+
+
+hr:last-child {
+    display: none;
+}
+
+/* You don't have to change anything here! Change the variables up top in the :root section. */
+
+body{
+  background: var(--body-bg-color) var(--body-image-bg) var(--body-bg-position) var(--body-bg-repeat) !important;
+  background-size: var(--body-bg-size);
+  font-family: var(--body-font) !important;
+  color: var(--body-color) !important;
+  font-size: var(--font-size) !important;
+}
+
+a{
+  color: var(--link);
+}
+
+    a:hover{
+      color: var(--link-hover);
+    }
+
+.banner{
+  background: var(--banner-bg-color) var(--banner-image) var(--banner-position) var(--banner-repeat) !important;
+  background-size: var(--banner-size);
+  height: var(--banner-height);
+}
+
+.comic-nav a{
+  color: var(--comic-nav);
+}
+
+    .comic-nav a:hover{
+      color: var(--comic-nav-hover);
+    }
+
+.footer{
+  background: var(--footer-bg-color) var(--footer-bg-image) var(--footer-bg-position) var(--footer-bg-repeat) !important;
+  background-size: var(--footer-bg-size);
+}
+
+    .footer a{
+      color: var(--footer-link);
+    }
+
+    .footer a:hover{
+      color: var(--footer-link-hover);
+    }
+
+
+/* Some other cosmetic changes... */
+
+
+.pushed-up{
+    margin-top: -6em;
+}
+
+.ftfy{
+    margin-left: .6em;
+}
+
+
+#latestcomicimage{
+    box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+    max-width:350px;
+}
+
+
+.comic-nav span {
+    position: relative;
+    top: -6px;
+    padding: 0 1em;
+}
+
+.reply1{
+    margin-left: 2em;
+}
+
+.reply2{
+    margin-left: 4em;
+}
+
+.reply3{
+    margin-left: 6em;
+}
+
+.reply4{
+    margin-left: 8em;
+}
+
+.reply5{
+    margin-left: 10em;
+}
+/* Mobile support cosmetic changes... */
+
+@media screen and (max-width: 768px){
+  .comic-nav span{
+    display: none;
+  }
+
+}
+
+</code></pre>
     </div>
 
     <h3 class="title">Comic Page</h3>
@@ -38,16 +371,67 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 
     <h3 class="title">Overview</h3>
     <div class="content">
-      <pre><code class="html"></code></pre>
+      <pre><code class="html">&lt;/div>&lt;/section>
+
+      &lt;div class="hero is-dark is-bold pushed-up">&lt;div class="hero-body">&lt;div class="container">
+      &lt;div class="columns">
+          &lt;div class="column">
+              &lt;h2 class="title is-2">&#91;v:webcomicname]&lt;/h2>
+              &lt;h3 class="subtitle is-4">A Free ComicFury Layout&lt;/h3>
+             	&lt;div class="description content">
+                  &lt;p>&#91;v:webcomicdescription]&lt;/p>
+                  &lt;p>Installation is very easy. All you need to do is head on over to &lt;a href="/install">install&lt;/a> and copy and paste the code from there. &lt;/p>
+              &lt;/div>
+              &lt;div class="buttons are-medium">
+              &lt;a class="button is-primary" href="/comics/1">Start Reading&lt;/a>
+              &lt;a class="button is-primary" href="/comics/">Read Latest &lt;i class="fas fa-angle-right fa-2x ftfy">&lt;/i>&lt;/a>
+              &lt;/div>
+          &lt;/div>
+          &lt;div class="column has-text-right">
+              &lt;a href="/comics/">&#91;v:latestcomicimage]&lt;/a>
+          &lt;/div>
+      &lt;/div>
+      &lt;/div>&lt;/div>&lt;/div>
+
+      &lt;section class="section">
+      &lt;div class="container">
+      &lt;h2 class="title">Latest Blog Posts&lt;/h2>
+
+      &lt;hr>
+
+      	&#91;l:latestblogs]
+      	        &lt;h3 class="title is-4">&lt;a href="&#91;v:l.bloglink]">&#91;v:l.blogtitle]&lt;/a>&lt;/h3>
+                    &lt;strong>&lt;a href="&#91;v:l.profilelink]" class="author">&#91;v:l.authorname]&lt;/a>&lt;/strong> &lt;small>&#91;v:l.posttime]&lt;/small>
+
+      		&lt;div class="blogmeta">
+                              &lt;a href="&#91;v:l.bloglink]">&#91;v:l.comments] Comments&lt;/a>
+              &lt;/div>
+
+              &lt;hr />
+
+      	&#91;/]
+
+      &lt;/div>&lt;/section>
+</code></pre>
     </div>
-
-  </div>
-
-  <div class="column">
 
     <h3 class="title">Search</h3>
     <div class="content">
-      <pre><code class="html"></code></pre>
+      <pre><code class="html">&lt;h2 class="title is-2">Search Results&lt;/h2>
+      &lt;div class="content">
+                  &#91;c:searched]
+                      &#91;c:!foundresults]
+                          &lt;p>Oops, looks like we didn't find anything. Try again!&lt;/p>
+                      &#91;/]
+
+                      &#91;c:foundresults]
+                          &#91;l:searchresults]
+                              &lt;p>&#91;v:l.number]. &lt;a href="&#91;v:l.comicurl]">&#91;v:l.comictitle]&lt;/a> - &lt;small>&#91;v:l.posttime]&lt;/small>&lt;/p>
+                          &#91;/]
+                      &#91;/]
+                  &#91;/]
+      &lt;/div>
+</code></pre>
     </div>
 
     <h3 class="title">Blog Archive</h3>
@@ -64,5 +448,3 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
     <div class="content">
       <pre><code class="html"></code></pre>
     </div>
-  </div>
-</div>

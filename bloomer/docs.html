@@ -11,6 +11,7 @@
 pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-left-radius:3px; border-bottom-right-radius:3px; border: 1px solid rgba(0, 196, 167, 0.35);}
 </style>
 <script>hljs.initHighlightingOnLoad();</script>
+
 <h3 class="subtitle is-4">Customizing your layout</h3>
 
 <div class="notification is-warning">Currently in progress. See updates on the <a href="#">forum</a>.</div>
@@ -54,40 +55,20 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 
 <p class="menu-label"><a href="#archive">Archive</a></p>
 
-<ul class="menu-list">
-	<li><a href="#comic-archive-default">Default</a></li>
-</ul>
-
-<p class="menu-label"><a href="#news-welcome">Overview</a></p>
+<p class="menu-label"><a href="#overview">Overview</a></p>
 
 <ul class="menu-list">
-	<li><a href="#link">Link</a></li>
-	<li><a href="#link">Link</a></li>
+	<li><a href="#intro">Introduction</a></li>
+	<li><a href="#cards">Cards</a></li>
 </ul>
 
 <p class="menu-label"><a href="#search">Search</a></p>
 
-
 <p class="menu-label"><a href="#blog-archive">Blog Archive</a></p>
-
-<ul class="menu-list">
-	<li><a>News Article</a></li>
-	<li><a>Table of Contents</a></li>
-	<li><a>Comments</a></li>
-</ul>
 
 <p class="menu-label"><a href="#blog-display">Blog Display</a></p>
 
-<ul class="menu-list">
-	<li><a>Article</a></li>
-</ul>
-
-
 <p class="menu-label"><a href="#error">Error Page</a></p>
-
-<ul class="menu-list">
-	<li><a>Article</a></li>
-</ul>
 
 </aside>
 </div>
@@ -478,24 +459,44 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 		<p><strong>Archive</strong> is where all of your comics are listed in a table. There's not much to customize in this section, but you're welcome to edit it.</p>
 	</div>
 
+<hr />
+
   <h3 class="title is-3" id="overview">Overview</h3>
   <div class="content">
 		<p><strong>Overview</strong> is an optional page for the front page of your comic. By default, it's not activated and so you'll need to activate it by going to your webcomic's <b>Manage > Edit Settings > Front page</b>.</p>
 	</div>
 
+  <h4 class="title is-4" id="intro">Introduction</h4>
+
+  <div class="content">
+      <p><b>The introduction</b> of the overview page consists of the comic's title, a customizeable subtitle, the description, two buttons for the first and latest comic, and finally the image of the latest comic.</p>
+    </div>
+
+  <h4 class="title is-4" id="cards">Cards</h4>
+
+  <div class="content">
+    <p><b>Cards</b> are a little feature added to make the overview page more interesting. Use them for listing links, cast members, etc. or don't use them at all! Just delete the entire code beginning with <code class="html">&lt;div class=&quot;hero is-light&quot;&gt;</code></p>
+  </div>
+
   <hr />
+
   <h3 class="title is-3" id="search">Search</h3>
 
   <div class="content"><p><b>Search</b> is the landing page for any search results.</p></div>
 
 	<h3 class="title is-3" id="blog-archive">Blog Archive</h3>
 
-  <div class="content"><p><b>Blog Archive</b> controls the appearance of the list of blog posts.</p></div>
+  <div class="content">
+    <p><b>Blog Archive</b> controls the appearance of the list of blog posts. By default, the blog post's contents aren't visible, but if you want the archive to include the blog post's contents then add this section after <code class="html">&lt;strong&gt;&lt;a href=&quot;&#91;v:l.profilelink]&quot; class=&quot;author&quot;&gt;&#91;v:l.authorname]&lt;/a&gt;&lt;/strong&gt; &lt;small&gt;&#91;v:l.posttime]&lt;/small&gt;</code>:</p>
+    <pre><code class="html">&lt;div class=&quot;content mt-5&quot;&gt;
+      &#91;v:blog]
+    &lt;/div&gt;</code></pre>
+  </div>
 
 	<h3 class="title is-3" id="blog-display">Blog Display</h3>
 
 	<div class="content">
-		<p><b>Blog Display</b> controls a blog post's appearance.</p>
+		<p><b>Blog Display</b> controls the blog post's appearance.</p>
 	</div>
 
 	<h3 class="title is-3" id="error">Error Page</h3>

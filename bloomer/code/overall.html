@@ -7,16 +7,6 @@
 
   <title>[v:webcomicname] | [v:pagetitle]</title>
 
-        <style type="text/css">
-            <!--layout:[css]-->
-        </style>
-        <script type="text/javascript" src="[v:cfscriptlink]"></script>
-        [c:iscomicpage]
-            <script type="text/javascript">
-                activateKeyboardNavigation("[v:prevcomicjs]", "[v:nextcomicjs]", "ArrowLeft", "ArrowRight");
-            </script>
-        [/]
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="Description" content="[v:webcomicdescription]">
           [c:iscomicpage]
@@ -39,17 +29,25 @@
   <link rel="alternate" type="application/rss+xml" title="[v:webcomicname] RSS" href="[v:webcomicurl]/rss/">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 
+  <style type="text/css">
+      <!--layout:[css]-->
+  </style>
+
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-<script src="https://kit.fontawesome.com/73fc00f64d.js" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript">
+    <script src="https://kit.fontawesome.com/73fc00f64d.js" crossorigin="anonymous"></script>
 
-    var cdata = {};
+    <script type="text/javascript" src="[v:cfscriptlink]"></script>
 
-  </script>
+    [c:iscomicpage]
+        <script type="text/javascript">
+            activateKeyboardNavigation("[v:prevcomicjs]", "[v:nextcomicjs]", "ArrowLeft", "ArrowRight");
+        </script>
+    [/]
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
@@ -59,7 +57,7 @@
 <!-- navigation goes here, this appears on every page -->
 
   <header>
-<section class="banner hero is-primary is-medium">
+<section class="banner hero is-medium">
   <div class="hero-body">
     <div class="container">
       <p class="title">
