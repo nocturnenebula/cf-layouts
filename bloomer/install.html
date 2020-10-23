@@ -9,442 +9,776 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <h3 class="subtitle is-4">Quick and Easy Installation</h3>
 
 <div class="content">
-<p>First, go to your Webcomic's management page > <strong>Edit Layout</strong>. Copy and paste the codes into the corresponding tabs:</p>
+<p>First, go to your Webcomic's management page > <strong>Edit Layout</strong>. Then, copy and paste the codes into the corresponding tabs:</p>
 </div>
 
     <h3 class="title">Overall</h3>
     <div class="content">
-      <pre><code class="html">&lt;!doctype html>
+      <pre><code class="html">&lt;!doctype html&gt;
 
-      &lt;html lang="en">
-      &lt;head>
+      &lt;html lang=&quot;en&quot;&gt;
+      &lt;head&gt;
 
-        &lt;meta charset="utf-8">
+        &lt;meta charset=&quot;utf-8&quot;&gt;
 
-        &lt;title>&#91;v:webcomicname] | &#91;v:pagetitle]&lt;/title>
+        &lt;title&gt;&#91;v:webcomicname] | &#91;v:pagetitle]&lt;/title&gt;
 
-              &lt;style type="text/css">
-                  &lt;!--layout:&#91;css]-->
-              &lt;/style>
-              &lt;script type="text/javascript" src="&#91;v:cfscriptlink]">&lt;/script>
-              &#91;c:iscomicpage]
-                  &lt;script type="text/javascript">
-                      activateKeyboardNavigation("&#91;v:prevcomicjs]", "&#91;v:nextcomicjs]", "ArrowLeft", "ArrowRight");
-                  &lt;/script>
-              &#91;/]
-
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1">
-        &lt;meta name="Description" content="&#91;v:webcomicdescription]">
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta name=&quot;Description&quot; content=&quot;&#91;v:webcomicdescription]&quot;&gt;
                 &#91;c:iscomicpage]
-                  &lt;meta property="og:type" content="website" />
-                  &lt;meta property="og:title" content="&#91;v:webcomicname]" />
-                  &lt;meta property="og:description" content="&#91;v:pagetitle]" />
-                  &lt;meta property="og:url" content="&#91;v:permalink]" />
-                  &lt;meta name="twitter:card" content="summary_large_image" />
-                  &lt;meta name="twitter:title" content="&#91;v:webcomicname]" />
-                  &lt;meta name="twitter:description" content="&#91;v:pagetitle]" />
+                  &lt;meta property=&quot;og:type&quot; content=&quot;website&quot; /&gt;
+                  &lt;meta property=&quot;og:title&quot; content=&quot;&#91;v:webcomicname]&quot; /&gt;
+                  &lt;meta property=&quot;og:description&quot; content=&quot;&#91;v:pagetitle]&quot; /&gt;
+                  &lt;meta property=&quot;og:url&quot; content=&quot;&#91;v:permalink]&quot; /&gt;
+                  &lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
+                  &lt;meta name=&quot;twitter:title&quot; content=&quot;&#91;v:webcomicname]&quot; /&gt;
+                  &lt;meta name=&quot;twitter:description&quot; content=&quot;&#91;v:pagetitle]&quot; /&gt;
 
                   &#91;c:comicimagetype=image]
-                      &lt;meta property="og:image" content="&#91;v:comicimageurl]" />
-                      &lt;meta property="og:image:width" content="&#91;v:comicwidth]" />
-                      &lt;meta property="og:image:height" content="&#91;v:comicheight]" />
-                      &lt;meta name="twitter:image" content="&#91;v:comicimageurl]" />
+                      &lt;meta property=&quot;og:image&quot; content=&quot;&#91;v:comicimageurl]&quot; /&gt;
+                      &lt;meta property=&quot;og:image:width&quot; content=&quot;&#91;v:comicwidth]&quot; /&gt;
+                      &lt;meta property=&quot;og:image:height&quot; content=&quot;&#91;v:comicheight]&quot; /&gt;
+                      &lt;meta name=&quot;twitter:image&quot; content=&quot;&#91;v:comicimageurl]&quot; /&gt;
                   &#91;/]
               &#91;/]
 
-        &lt;link rel="alternate" type="application/rss+xml" title="&#91;v:webcomicname] RSS" href="&#91;v:webcomicurl]/rss/">
-        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+        &lt;link rel=&quot;alternate&quot; type=&quot;application/rss+xml&quot; title=&quot;&#91;v:webcomicname] RSS&quot; href=&quot;&#91;v:webcomicurl]/rss/&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css&quot;&gt;
 
-        &lt;!--&#91;if lt IE 9]>
-        &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">&lt;/script>
-        &lt;!&#91;endif]-->
+        &lt;style type=&quot;text/css&quot;&gt;
+            &lt;!--layout:&#91;css]--&gt;
+        &lt;/style&gt;
 
-      &lt;script src="https://kit.fontawesome.com/73fc00f64d.js" crossorigin="anonymous">&lt;/script>
-      &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">&lt;/script>
+        &lt;!--&#91;if lt IE 9]&gt;
+        &lt;script src=&quot;http://html5shiv.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+        &lt;!&#91;endif]--&gt;
 
-      &lt;/head>
+          &lt;script src=&quot;https://kit.fontawesome.com/73fc00f64d.js&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
 
-      &lt;body role="document">
+          &lt;script type=&quot;text/javascript&quot; src=&quot;&#91;v:cfscriptlink]&quot;&gt;&lt;/script&gt;
+
+          &#91;c:iscomicpage]
+              &lt;script type=&quot;text/javascript&quot;&gt;
+                  activateKeyboardNavigation(&quot;&#91;v:prevcomicjs]&quot;, &quot;&#91;v:nextcomicjs]&quot;, &quot;ArrowLeft&quot;, &quot;ArrowRight&quot;);
+              &lt;/script&gt;
+          &#91;/]
+
+          &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+      &lt;/head&gt;
+
+      &lt;body role=&quot;document&quot;&gt;
 
 
-      &lt;!-- navigation goes here, this appears on every page -->
+      &lt;!-- navigation goes here, this appears on every page --&gt;
 
-        &lt;header>
-      &lt;section class="banner hero is-primary is-medium">
-        &lt;div class="hero-body">
-          &lt;div class="container">
-            &lt;p class="title">
-            &lt;/p>
-          &lt;/div>
-        &lt;/div>
-      &lt;/section>
-          &lt;nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
-        &lt;div class="container">
-          &lt;div class="navbar-brand">
-            &lt;a class="navbar-item" href="/">
-              &lt;img src="https://nocturnenebula.github.io/cf-layouts/bloomer/images/logo.png" width="128" height="28">
-            &lt;/a>
+        &lt;header&gt;
+      &lt;section class=&quot;banner hero is-medium&quot;&gt;
+        &lt;div class=&quot;hero-body&quot;&gt;
+          &lt;div class=&quot;container&quot;&gt;
+            &lt;p class=&quot;title&quot;&gt;
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+          &lt;nav class=&quot;navbar has-shadow&quot; role=&quot;navigation&quot; aria-label=&quot;main navigation&quot;&gt;
+        &lt;div class=&quot;container&quot;&gt;
+          &lt;div class=&quot;navbar-brand&quot;&gt;
+            &lt;a class=&quot;navbar-item&quot; href=&quot;/&quot;&gt;
+              &lt;img src=&quot;https://nocturnenebula.github.io/cf-layouts/bloomer/images/logo.png&quot; width=&quot;128&quot; height=&quot;28&quot;&gt;
+            &lt;/a&gt;
 
-            &lt;a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-              &lt;span aria-hidden="true">&lt;/span>
-              &lt;span aria-hidden="true">&lt;/span>
-              &lt;span aria-hidden="true">&lt;/span>
-            &lt;/a>
-          &lt;/div>
+            &lt;a role=&quot;button&quot; class=&quot;navbar-burger burger&quot; aria-label=&quot;menu&quot; aria-expanded=&quot;false&quot; data-target=&quot;navbarBasicExample&quot;&gt;
+              &lt;span aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+              &lt;span aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+              &lt;span aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+            &lt;/a&gt;
+          &lt;/div&gt;
 
-          &lt;div id="navbar-menu" class="navbar-menu">
-            &lt;div class="navbar-start">
+          &lt;div id=&quot;navbar-menu&quot; class=&quot;navbar-menu&quot;&gt;
+            &lt;div class=&quot;navbar-start&quot;&gt;
 
-              &lt;a class="navbar-item" href="/">Home&lt;/a>
-              &lt;a class="navbar-item" href="/comics/1">First&lt;/a>
-              &lt;a class="navbar-item" href="/comics/">Latest&lt;/a>
-              &lt;a class="navbar-item" href="/archive/">Archive&lt;/a>
-              &lt;a class="navbar-item" href="/blog/">Blog&lt;/a>
+              &lt;a class=&quot;navbar-item&quot; href=&quot;/&quot;&gt;Home&lt;/a&gt;
+              &lt;a class=&quot;navbar-item&quot; href=&quot;/comics/1&quot;&gt;First&lt;/a&gt;
+              &lt;a class=&quot;navbar-item&quot; href=&quot;/comics/&quot;&gt;Latest&lt;/a&gt;
+              &lt;a class=&quot;navbar-item&quot; href=&quot;/archive/&quot;&gt;Archive&lt;/a&gt;
+              &lt;a class=&quot;navbar-item&quot; href=&quot;/blog/&quot;&gt;Blog&lt;/a&gt;
 
               &#91;l:extrapages]
-                &lt;a class="navbar-item" href="&#91;v:l.link]">&#91;v:l.title]&lt;/a>
+                &lt;a class=&quot;navbar-item&quot; href=&quot;&#91;v:l.link]&quot;&gt;&#91;v:l.title]&lt;/a&gt;
               &#91;/]
 
-              &lt;div class="navbar-item has-dropdown is-hoverable">
-                &lt;a class="navbar-link">Links&lt;/a>
-                &lt;div class="navbar-dropdown">
-                  &lt;a class="navbar-item">Link&lt;/a>
-                  &lt;a class="navbar-item">Link&lt;/a>
-                  &lt;a class="navbar-item">Link&lt;/a>
-                  &lt;hr class="navbar-divider">
+              &lt;div class=&quot;navbar-item has-dropdown is-hoverable&quot;&gt;
+                &lt;a class=&quot;navbar-link&quot;&gt;Links&lt;/a&gt;
+                &lt;div class=&quot;navbar-dropdown&quot;&gt;
+                  &lt;a class=&quot;navbar-item&quot;&gt;Link&lt;/a&gt;
+                  &lt;a class=&quot;navbar-item&quot;&gt;Link&lt;/a&gt;
+                  &lt;a class=&quot;navbar-item&quot;&gt;Link&lt;/a&gt;
+                  &lt;hr class=&quot;navbar-divider&quot;&gt;
                   &#91;c:infinitescrollenabled]
-                    &lt;a class="navbar-item" href="&#91;v:infinitescrolllink]">Scroll View&lt;/a>
+                    &lt;a class=&quot;navbar-item&quot; href=&quot;&#91;v:infinitescrolllink]&quot;&gt;Scroll View&lt;/a&gt;
                   &#91;/]
-                &lt;/div>
-              &lt;/div>
-            &lt;/div>
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
 
-            &lt;div class="navbar-end">
-              &lt;div class="navbar-item">
+            &lt;div class=&quot;navbar-end&quot;&gt;
+              &lt;div class=&quot;navbar-item&quot;&gt;
                   &#91;c:searchon]
-                      &lt;div class="field">
-                          &lt;form method="post" action="/search/">
-                          &lt;p class="control has-icons-right">
-                            &lt;input class="input" type="text" name="search" value="Search..." onclick="this.value = '';">
-                            &lt;span class="icon is-small is-right">
-                              &lt;i class="fas fa-search">&lt;/i>
-                              &lt;/span>
-                          &lt;/p>
-                          &lt;/form>
-                      &lt;/div>
+                      &lt;div class=&quot;field&quot;&gt;
+                          &lt;form method=&quot;post&quot; action=&quot;/search/&quot;&gt;
+                          &lt;p class=&quot;control has-icons-right&quot;&gt;
+                            &lt;input class=&quot;input&quot; type=&quot;text&quot; name=&quot;search&quot; value=&quot;Search...&quot; onclick=&quot;this.value = &#39;&#39;;&quot;&gt;
+                            &lt;span class=&quot;icon is-small is-right&quot;&gt;
+                              &lt;i class=&quot;fas fa-search&quot;&gt;&lt;/i&gt;
+                              &lt;/span&gt;
+                          &lt;/p&gt;
+                          &lt;/form&gt;
+                      &lt;/div&gt;
                   &#91;/]
 
-              &lt;/div>
+              &lt;/div&gt;
 
 
-              &lt;div class="navbar-item">
-                 &lt;div class="field is-grouped">
-                  &lt;p class="control">
-                      &lt;a href="&#91;v:addsubscriptionlink]" target="_blank">&lt;span class="icon has-text-danger">&lt;i class="fas fa-heart">&lt;/i>&lt;/span>&lt;/a>
-                  &lt;/p>
-                  &lt;p class="control">
-                    &lt;a href="#" target="_blank">
-                      &lt;span class="icon">&lt;i class="fab fa-patreon">&lt;/i>&lt;/span>
-                    &lt;/a>
-                  &lt;/p>
-                  &lt;p class="control">
-                    &lt;a href="#" target="_blank">
-                      &lt;span class="icon">&lt;i class="fab fa-facebook">&lt;/i>&lt;/span>
-                    &lt;/a>
-                  &lt;/p>
-                  &lt;p class="control">
-                    &lt;a href="#" target="_blank">
-                      &lt;span class="icon">&lt;i class="fab fa-twitter">&lt;/i>&lt;/span>
-                    &lt;/a>
-                  &lt;/p>
-                &lt;/div>
-              &lt;/div>
-            &lt;/div>
-          &lt;/div>
-        &lt;/div>
-      &lt;/nav>
+              &lt;div class=&quot;navbar-item&quot;&gt;
+                 &lt;div class=&quot;field is-grouped&quot;&gt;
+                  &lt;p class=&quot;control&quot;&gt;
+                      &lt;a href=&quot;&#91;v:addsubscriptionlink]&quot; target=&quot;_blank&quot;&gt;&lt;span class=&quot;icon has-text-danger&quot;&gt;&lt;i class=&quot;fas fa-heart&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p class=&quot;control&quot;&gt;
+                    &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;
+                      &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fab fa-patreon&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p class=&quot;control&quot;&gt;
+                    &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;
+                      &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fab fa-facebook&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                  &lt;/p&gt;
+                  &lt;p class=&quot;control&quot;&gt;
+                    &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;
+                      &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;fab fa-twitter&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                  &lt;/p&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/nav&gt;
 
-      &lt;/header>
+      &lt;/header&gt;
 
-        &lt;main>
-          &lt;section class="section">
-            &lt;div class="container">
+        &lt;main&gt;
+          &lt;section class=&quot;section&quot;&gt;
+            &lt;div class=&quot;container&quot;&gt;
               &#91;c:isextrapage]
-                  &lt;h2 class="title is-2">&#91;v:pagetitle]&lt;/h2>
+                  &lt;h2 class=&quot;title is-2&quot;&gt;&#91;v:pagetitle]&lt;/h2&gt;
               &#91;/]
-              &lt;!--layout:&#91;content]-->
+              &lt;!--layout:&#91;content]--&gt;
 
-              &lt;!-- cf ads -->
+              &lt;!-- cf ads --&gt;
                 &#91;c:bannerads]
-                    &lt;!-- voluntary CF support ads, you can turn these off in your webcomic settings -->
-                    &lt;div id="cf_ads">&#91;v:banneradcode]&lt;/div>
+                    &lt;!-- voluntary CF support ads, you can turn these off in your webcomic settings --&gt;
+                    &lt;div id=&quot;cf_ads&quot;&gt;&#91;v:banneradcode]&lt;/div&gt;
                 &#91;/]
-              &lt;!-- end cf ads -->
-              &lt;/div>
-            &lt;/section>
-          &lt;/main>
+              &lt;!-- end cf ads --&gt;
+              &lt;/div&gt;
+            &lt;/section&gt;
+          &lt;/main&gt;
 
-          &lt;footer class="footer has-text-centered">
-            &lt;div class="content">
-              &lt;p>&#169; username(s) Year-Year. All rights reserved.
-              &lt;p>Made by &lt;a href="https://comicfury.com/profile.php?username=nocturnenebula" target="_blank">nocturnenebula&lt;/a> with &lt;a href="https://bulma.io" target="_blank">Bulma&lt;/a> | Hosted on &lt;a href="https://comicfury.com/" target="_blank">Comic Fury&lt;span class="subtle"> Webcomic Hosting&lt;/span>&lt;/a>&lt;/p>
-            &lt;/div>
-          &lt;/footer>
+          &lt;footer class=&quot;footer has-text-centered&quot;&gt;
+            &lt;div class=&quot;content&quot;&gt;
+              &lt;p&gt;&amp;#169; username(s) Year-Year. All rights reserved.
+              &lt;p&gt;Made by &lt;a href=&quot;https://comicfury.com/profile.php?username=nocturnenebula&quot; target=&quot;_blank&quot;&gt;nocturnenebula&lt;/a&gt; with &lt;a href=&quot;https://bulma.io&quot; target=&quot;_blank&quot;&gt;Bulma&lt;/a&gt; | Hosted on &lt;a href=&quot;https://comicfury.com/&quot; target=&quot;_blank&quot;&gt;Comic Fury&lt;span class=&quot;subtle&quot;&gt; Webcomic Hosting&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/footer&gt;
 
 
-          &lt;script type="text/javascript">
+          &lt;script type=&quot;text/javascript&quot;&gt;
             $(document).ready(function() {
 
               // Check for click events on the navbar burger icon
-              $(".navbar-burger").click(function() {
+              $(&quot;.navbar-burger&quot;).click(function() {
 
-                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                $(".navbar-burger").toggleClass("is-active");
-                $(".navbar-menu").toggleClass("is-active");
+                // Toggle the &quot;is-active&quot; class on both the &quot;navbar-burger&quot; and the &quot;navbar-menu&quot;
+                $(&quot;.navbar-burger&quot;).toggleClass(&quot;is-active&quot;);
+                $(&quot;.navbar-menu&quot;).toggleClass(&quot;is-active&quot;);
 
               });
             });
-          &lt;/script>
+          &lt;/script&gt;
 
-        &lt;/body>
+        &lt;/body&gt;
 
-        &lt;/html>
-
-</code></pre>
+        &lt;/html&gt;</code></pre>
     </div>
 
     <h3 class="title">Layout CSS</h3>
     <div class="content">
       <pre><code class="css">:root{ /* learn more about it here: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 
---body-bg-color:#FFF; /*this changes the overall page's background color*/
---body-bg-image: url(''); /*add the body image here*/
---body-bg-position: center; /*add the body image positioning here. this can be two values (ex: top center) */
---body-bg-repeat: repeat; /* add the body image repeatability here. you can change it to repeat, repeat-x, repeat-y, etc. */
---body-bg-size: contain; /*this changes how you want the bg image to stretch out. */
---body-font: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif ; /*change the font-family of the entire site here*/
---body-font-size: 16px; /*change the font size of the entire site here*/
---body-color: #4a4a4a; /*change the font color of the entire site here*/
+      --body-bg-color:#FFF; /*this changes the overall page's background color*/
+      --body-bg-image: url(''); /*add the body image here*/
+      --body-bg-position: center; /*add the body image positioning here. this can be two values (ex: top center) */
+      --body-bg-repeat: repeat; /* add the body image repeatability here. you can change it to repeat, repeat-x, repeat-y, etc. */
+      --body-bg-size: contain; /*this changes how you want the bg image to stretch out. */
+      --body-font: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif ; /*change the font-family of the entire site here*/
+      --body-font-size: 16px; /*change the font size of the entire site here*/
+      --body-color: #4a4a4a; /*change the font color of the entire site here*/
 
---link:#3273dc; /*change the links color here*/
---link-hover: #363636;  /*change the links hover color here*/
+      --link:#3273dc; /*change the links color here*/
+      --link-hover: #363636;  /*change the links hover color here*/
 
---banner-bg-color: #00d1b2; /*-- you can change the color of the banner bg here (if using transparent images) */
---banner-image:  url('http://placehold.it/1600x350/00d1b2/FFFFFF/?text=Banner+Image'); /* replace the background here */
---banner-position: center; /*-- by default, the banner is centered. this is where you can change it --*/
---banner-repeat: no-repeat; /*-- by default, it's set not to repeat. you can change it to repeat, repeat-x, repeat-y, etc. --*/
---banner-size: cover; /* this stretches the banner out to cover the whole area */
---banner-height: 350px; /*-- you can change the height of the banner here */
+      --banner-bg-color: #00d1b2; /*-- you can change the color of the banner bg here (if using transparent images) */
+      --banner-image:  url('http://placehold.it/1600x350/00d1b2/FFFFFF/?text=Banner+Image'); /* replace the background here */
+      --banner-position: center; /*-- by default, the banner is centered. this is where you can change it --*/
+      --banner-repeat: no-repeat; /*-- by default, it's set not to repeat. you can change it to repeat, repeat-x, repeat-y, etc. --*/
+      --banner-size: cover; /* this stretches the banner out to cover the whole area */
+      --banner-height: 350px; /*-- you can change the height of the banner here */
 
---comic-nav: #4a4a4a; /*This changes the color of the comic navigation! */
---comic-nav-hover: #777; /*This is what it changes to when you hover over it! */
+      --comic-nav: #4a4a4a; /*This changes the color of the comic navigation! */
+      --comic-nav-hover: #777; /*This is what it changes to when you hover over it! */
 
---footer-bg-color: #fafafa; /* this changes the footer's background color */
---footer-bg-image: url(''); /* changes the footer background image */
---footer-bg-position: top center; /* changes the positioning of the background image */
---footer-bg-repeat: repeat;
---footer-bg-size: contain;
---footer-link: #3273dc;
---footer-link-hover: #363636;
-}
-
-
-html, body{
-min-height:100vh;
-}
+      --footer-bg-color: #fafafa; /* this changes the footer's background color */
+      --footer-bg-image: url(''); /* changes the footer background image */
+      --footer-bg-position: top center; /* changes the positioning of the background image */
+      --footer-bg-repeat: repeat;
+      --footer-bg-size: contain;
+      --footer-link: #3273dc;
+      --footer-link-hover: #363636;
+      }
 
 
-hr:last-child {
-    display: none;
-}
-
-/* You don't have to change anything here! Change the variables up top in the :root section. */
-
-body{
-  background: var(--body-bg-color) var(--body-image-bg) var(--body-bg-position) var(--body-bg-repeat) !important;
-  background-size: var(--body-bg-size);
-  font-family: var(--body-font) !important;
-  color: var(--body-color) !important;
-  font-size: var(--font-size) !important;
-}
-
-a{
-  color: var(--link);
-}
-
-    a:hover{
-      color: var(--link-hover);
-    }
-
-.banner{
-  background: var(--banner-bg-color) var(--banner-image) var(--banner-position) var(--banner-repeat) !important;
-  background-size: var(--banner-size);
-  height: var(--banner-height);
-}
-
-.comic-nav a{
-  color: var(--comic-nav);
-}
-
-    .comic-nav a:hover{
-      color: var(--comic-nav-hover);
-    }
-
-.footer{
-  background: var(--footer-bg-color) var(--footer-bg-image) var(--footer-bg-position) var(--footer-bg-repeat) !important;
-  background-size: var(--footer-bg-size);
-}
-
-    .footer a{
-      color: var(--footer-link);
-    }
-
-    .footer a:hover{
-      color: var(--footer-link-hover);
-    }
+      html, body{
+      min-height:100vh;
+      }
 
 
-/* Some other cosmetic changes... */
+      hr:last-child {
+          display: none;
+      }
+
+      /* You don't have to change anything here! Change the variables up top in the :root section. */
+
+      body{
+        background: var(--body-bg-color) var(--body-image-bg) var(--body-bg-position) var(--body-bg-repeat) !important;
+        background-size: var(--body-bg-size);
+        font-family: var(--body-font) !important;
+        color: var(--body-color) !important;
+        font-size: var(--font-size) !important;
+      }
+
+      a{
+        color: var(--link);
+      }
+
+          a:hover{
+            color: var(--link-hover);
+          }
+
+      .banner{
+        background: var(--banner-bg-color) var(--banner-image) var(--banner-position) var(--banner-repeat) !important;
+        background-size: var(--banner-size);
+        height: var(--banner-height);
+      }
+
+      .comic-nav a{
+        color: var(--comic-nav);
+      }
+
+          .comic-nav a:hover{
+            color: var(--comic-nav-hover);
+          }
+
+      .footer{
+        background: var(--footer-bg-color) var(--footer-bg-image) var(--footer-bg-position) var(--footer-bg-repeat) !important;
+        background-size: var(--footer-bg-size);
+      }
+
+          .footer a{
+            color: var(--footer-link);
+          }
+
+          .footer a:hover{
+            color: var(--footer-link-hover);
+          }
 
 
-.pushed-up{
-    margin-top: -6em;
-}
-
-.ftfy{
-    margin-left: .6em;
-}
+      /* Some other cosmetic changes... */
 
 
-#latestcomicimage{
-    box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
-    max-width:350px;
-}
+      .pushed-up{
+          margin-top: -6em;
+      }
+
+      .ftfy{
+          margin-left: .6em;
+      }
 
 
-.comic-nav span {
-    position: relative;
-    top: -6px;
-    padding: 0 1em;
-}
+      #latestcomicimage{
+          box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+          max-width:350px;
+      }
 
-.reply1{
-    margin-left: 2em;
-}
 
-.reply2{
-    margin-left: 4em;
-}
+      .comic-nav span {
+          position: relative;
+          top: -6px;
+          padding: 0 1em;
+      }
 
-.reply3{
-    margin-left: 6em;
-}
+      .reply1{
+          margin-left: 2em;
+      }
 
-.reply4{
-    margin-left: 8em;
-}
+      .reply2{
+          margin-left: 4em;
+      }
 
-.reply5{
-    margin-left: 10em;
-}
-/* Mobile support cosmetic changes... */
+      .reply3{
+          margin-left: 6em;
+      }
 
-@media screen and (max-width: 768px){
-  .comic-nav span{
-    display: none;
-  }
+      .reply4{
+          margin-left: 8em;
+      }
 
-}
+      .reply5{
+          margin-left: 10em;
+      }
+      /* Mobile support cosmetic changes... */
 
+      @media screen and (max-width: 768px){
+        .comic-nav span{
+          display: none;
+        }
+      }
 </code></pre>
     </div>
 
     <h3 class="title">Comic Page</h3>
     <div class="content">
-      <pre><code class="html"></code></pre>
+      <pre><code class="html">&lt;div class=&quot;comic-header has-text-centered mb-5&quot;&gt;
+      	&lt;h1 class=&quot;title&quot;&gt;&#91;v:comictitle]&lt;/h1&gt;
+      	&lt;div class=&quot;comic-date&quot;&gt;&#91;v:posttime]&lt;/div&gt;
+      &lt;/div&gt;
+
+
+      &lt;div class=&quot;comic-nav has-text-centered&quot;&gt;
+      	&lt;div class=&quot;columns is-mobile&quot;&gt;
+      	  &lt;div class=&quot;column&quot;&gt;
+      	    &lt;a href=&quot;/comics/1&quot;&gt;&lt;i class=&quot;fas fa-angle-double-left fa-2x&quot;&gt;&lt;/i&gt; &lt;span&gt;First&lt;/span&gt;&lt;/a&gt;
+      	  &lt;/div&gt;
+      	  &lt;div class=&quot;column&quot;&gt;
+      	    &lt;a href=&quot;&#91;v:prevcomic]&quot;&gt;&lt;i class=&quot;fas fa-angle-left fa-2x&quot;&gt;&lt;/i&gt; &lt;span&gt;Previous&lt;/span&gt;&lt;/a&gt;
+      	  &lt;/div&gt;
+      	  &lt;div class=&quot;column&quot;&gt;
+      	    &lt;a href=&quot;&#91;v:nextcomic]&quot;&gt;&lt;span&gt;Next&lt;/span&gt; &lt;i class=&quot;fas fa-angle-right fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+      	  &lt;/div&gt;
+      	  &lt;div class=&quot;column&quot;&gt;
+      	    &lt;a href=&quot;/comics/&quot;&gt;&lt;span&gt;Latest&lt;/span&gt; &lt;i class=&quot;fas fa-angle-double-right fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+      	  &lt;/div&gt;
+      	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+      &lt;div class=&quot;comic-image has-text-centered	&quot;&gt;
+        &lt;figure class=&quot;comic&quot;&gt;&#91;v:comicimage]&lt;/figure&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;comic-nav has-text-centered&quot;&gt;
+      	&lt;div class=&quot;columns is-mobile&quot;&gt;
+      	  &lt;div class=&quot;column&quot;&gt;
+      	    &lt;a href=&quot;/comics/1&quot;&gt;&lt;i class=&quot;fas fa-angle-double-left fa-2x&quot;&gt;&lt;/i&gt; &lt;span&gt;First&lt;/span&gt;&lt;/a&gt;
+      	  &lt;/div&gt;
+      	  &lt;div class=&quot;column&quot;&gt;
+      	    &lt;a href=&quot;&#91;v:prevcomic]&quot;&gt;&lt;i class=&quot;fas fa-angle-left fa-2x&quot;&gt;&lt;/i&gt; &lt;span&gt;Previous&lt;/span&gt;&lt;/a&gt;
+      	  &lt;/div&gt;
+      	  &lt;div class=&quot;column&quot;&gt;
+      	    &lt;a href=&quot;&#91;v:nextcomic]&quot;&gt;&lt;span&gt;Next&lt;/span&gt; &lt;i class=&quot;fas fa-angle-right fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+      	  &lt;/div&gt;
+      	  &lt;div class=&quot;column&quot;&gt;
+      	    &lt;a href=&quot;/comics/&quot;&gt;&lt;span&gt;Latest&lt;/span&gt; &lt;i class=&quot;fas fa-angle-double-right fa-2x&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+      	  &lt;/div&gt;
+      	&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;authornotes section&quot;&gt;
+        &#91;c:authornotes]
+      		&#91;l:authornotes]
+      			&lt;h3 id=&quot;&#91;v:l.commentanchor]&quot; class=&quot;title&quot;&gt;From the Author&lt;/h3&gt;
+      			&lt;div class=&quot;box&quot;&gt;
+      	      &lt;article class=&quot;media&quot;&gt;
+      		      &lt;div class=&quot;media-left&quot;&gt;
+      			      &lt;figure class=&quot;image is-64x64&quot;&gt;
+      			        &lt;a href=&quot;&#91;v:l.profilelink]&quot;&gt;&lt;img src=&quot;&#91;c:l.avatar]&#91;v:l.avatar]&#91;/]&#91;c:!l.avatar]https://nocturnenebula.github.io/cf-layouts/bloomer/images/no-avatar.jpg&#91;/]&quot; alt=&quot;v:1.authorname&quot;/&gt;&lt;/a&gt;
+      			      &lt;/figure&gt;
+      		      &lt;/div&gt;
+      		      &lt;div class=&quot;media-content&quot;&gt;
+      			      &lt;div class=&quot;content&quot;&gt;
+      			        &lt;p&gt;
+      			          &lt;strong&gt;&#91;v:l.commenttitle]&lt;/strong&gt; &lt;small&gt;&lt;a href=&quot;&#91;v:l.profilelink]&quot;&gt;&#91;v:l.authorname]&lt;/a&gt;&lt;/small&gt; &lt;small&gt;&#91;v:l.posttime]&lt;/small&gt;
+      			          &lt;br&gt;
+      								&#91;v:l.comment]
+      			        	&lt;/p&gt;
+      				     &lt;/div&gt;
+      					  &lt;nav class=&quot;level is-mobile&quot;&gt;
+      							&lt;div class=&quot;level-left&quot;&gt;
+      					      &lt;a class=&quot;level-item&quot; aria-label=&quot;reply&quot; href=&quot;&#91;v:l.replylink]&quot; onclick=&quot;var new_window = window.open(&#39;&#91;v:l.replylink]&#39;, &#39;sj_comment&#39;, &#39;height=340, width=420&#39;); new_window.focus(); return false;&quot;&gt;Reply&lt;/a&gt;
+      					      &lt;a class=&quot;level-item&quot; aria-label=&quot;edit&quot; href=&quot;&#91;v:l.editlink]&quot; onclick=&quot;var new_window = window.open(&#39;&#91;v:l.editlink]&#39;, &#39;sj_comment&#39;, &#39;height=340, width=420&#39;); new_window.focus(); return false;&quot;&gt;Edit&lt;/a&gt;
+      					      &lt;a class=&quot;level-item&quot; aria-label=&quot;delete&quot; href=&quot;&#91;v:l.deletelink]&quot; onclick=&quot;var new_window = window.open(&#39;&#91;v:l.deletelink]&#39;, &#39;sj_comment&#39;, &#39;height=340, width=420&#39;); new_window.focus(); return false;&quot;&gt;Delete&lt;/a&gt;
+      					    &lt;/div&gt;
+      					  &lt;/nav&gt;
+      	    		&lt;/div&gt;
+      			  &lt;/article&gt;
+      		  &lt;/div&gt;
+      		&#91;/]
+      	&#91;/]
+      &lt;/div&gt;
+
+      &#91;c:showcomments]
+      	&lt;div class=&quot;comments section&quot;&gt;
+
+      	&lt;h3 class=&quot;title&quot;&gt;Comments&lt;/h3&gt;
+
+      	&#91;c:allowcomments]
+      		&lt;div class=&quot;commentform&quot;&gt;
+      			&#91;v:commentform]
+      		&lt;/div&gt;
+
+      	&#91;/]
+
+      	&#91;c:comments]
+      		&#91;l:comments]
+      		&lt;div class=&quot;box &#91;c:l.depth&lt;=4]reply&#91;v:l.depth]&#91;/]&#91;c:l.depth&gt;4]reply5&#91;/]&quot;&gt;
+      			&lt;article class=&quot;media&quot;&gt;
+      				&lt;div class=&quot;media-left&quot;&gt;
+      					&lt;figure class=&quot;image is-64x64&quot;&gt;
+      						&lt;a href=&quot;&#91;v:l.profilelink]&quot;&gt;&lt;img src=&quot;&#91;c:l.avatar]&#91;v:l.avatar]&#91;/]&#91;c:!l.avatar]https://nocturnenebula.github.io/cf-layouts/bloomer/images/no-avatar.jpg&#91;/]&quot; alt=&quot;v:1.authorname&quot;/&gt;&lt;/a&gt;
+      					&lt;/figure&gt;
+      				&lt;/div&gt;
+      				&lt;div class=&quot;media-content&quot;&gt;
+      					&lt;div class=&quot;content&quot;&gt;
+      						&lt;p&gt;
+      							&lt;strong&gt;&#91;v:l.commenttitle]&lt;/strong&gt; &lt;small&gt;&lt;a href=&quot;&#91;v:l.profilelink]&quot;&gt;&#91;v:l.authorname]&lt;/a&gt;&lt;/small&gt; &lt;small&gt;&#91;v:l.posttime]&lt;/small&gt;
+      							&lt;br&gt;
+      							&#91;v:l.comment]
+      						&lt;/p&gt;
+      					&lt;/div&gt;
+      					&lt;nav class=&quot;level is-mobile&quot;&gt;
+      						&lt;div class=&quot;level-left&quot;&gt;
+      						&lt;a class=&quot;level-item&quot; aria-label=&quot;reply&quot; href=&quot;&#91;v:l.replylink]&quot; onclick=&quot;var new_window = window.open(&#39;&#91;v:l.replylink]&#39;, &#39;sj_comment&#39;, &#39;height=340, width=420&#39;); new_window.focus(); return false;&quot;&gt;Reply&lt;/a&gt;
+      						&lt;a class=&quot;level-item&quot; aria-label=&quot;edit&quot; href=&quot;&#91;v:l.editlink]&quot; onclick=&quot;var new_window = window.open(&#39;&#91;v:l.editlink]&#39;, &#39;sj_comment&#39;, &#39;height=340, width=420&#39;); new_window.focus(); return false;&quot;&gt;Edit&lt;/a&gt;
+      						&lt;a class=&quot;level-item&quot; aria-label=&quot;delete&quot; href=&quot;&#91;v:l.deletelink]&quot; onclick=&quot;var new_window = window.open(&#39;&#91;v:l.deletelink]&#39;, &#39;sj_comment&#39;, &#39;height=340, width=420&#39;); new_window.focus(); return false;&quot;&gt;Delete&lt;/a&gt;
+      						&lt;/div&gt;
+      					&lt;/nav&gt;
+      				&lt;/div&gt;
+      			&lt;/article&gt;
+      		&lt;/div&gt;
+      		&#91;/]
+      	&#91;/]
+
+      	&lt;/div&gt;
+      &#91;/]</code></pre>
     </div>
 
     <h3 class="title">Archive</h3>
     <div class="content">
-      <pre><code class="html"></code></pre>
+      <pre><code class="html">&lt;h2 class=&quot;title is-2&quot;&gt;Comic Archive&lt;/h2&gt;
+
+      &#91;c:usechapters]
+      &lt;h4 class=&quot;subtitle is-5&quot;&gt;&#91;v:l.chaptername]&lt;/h4&gt;
+      &#91;/]
+
+       &#91;l:chapteredarchive]&#91;c:l.newchapter]
+
+       &lt;table class=&quot;table is-fullwidth is-hoverable&quot;&gt;
+      	 &lt;thead&gt;
+      		 &lt;th&gt;#&lt;/th&gt;
+      		 &lt;th&gt;Title&lt;/th&gt;
+      		 &lt;th&gt;Date Released&lt;/th&gt;
+      		 &lt;th&gt;Comments&lt;/th&gt;
+      	 &lt;/thead&gt;
+
+      	 &#91;c:usechapters]
+      	 &lt;h4 class=&quot;subtitle is-5&quot;&gt;&#91;v:l.chaptername]&lt;/h4&gt;
+      	 &#91;/]
+
+      	 &#91;/]
+
+      	 &lt;tr&gt;
+      		 &lt;td&gt;&#91;v:l.number]&lt;/td&gt;
+      		 &lt;td&gt;
+      			 &lt;a href=&quot;&#91;v:l.comicurl]&quot;&gt;&#91;v:l.comictitle]&lt;/a&gt;
+      		 &lt;/td&gt;
+      		 &lt;td&gt;&#91;v:l.posttime]&lt;/td&gt;
+      		 &lt;td&gt;&lt;a href=&quot;&#91;v:l.comicurl]&quot;&gt;&#91;v:l.comments] Comments&lt;/a&gt;&lt;/td&gt;
+      	 &lt;/tr&gt;
+
+      	 &#91;c:l.newchapter]
+
+      	 &#91;/]&#91;/]
+
+       &lt;/table&gt;</code></pre>
     </div>
 
     <h3 class="title">Overview</h3>
     <div class="content">
-      <pre><code class="html">&lt;/div>&lt;/section>
+      <pre><code class="html">&lt;/div&gt;&lt;/section&gt;
 
-      &lt;div class="hero is-dark is-bold pushed-up">&lt;div class="hero-body">&lt;div class="container">
-      &lt;div class="columns">
-          &lt;div class="column">
-              &lt;h2 class="title is-2">&#91;v:webcomicname]&lt;/h2>
-              &lt;h3 class="subtitle is-4">A Free ComicFury Layout&lt;/h3>
-             	&lt;div class="description content">
-                  &lt;p>&#91;v:webcomicdescription]&lt;/p>
-                  &lt;p>Installation is very easy. All you need to do is head on over to &lt;a href="/install">install&lt;/a> and copy and paste the code from there. &lt;/p>
-              &lt;/div>
-              &lt;div class="buttons are-medium">
-              &lt;a class="button is-primary" href="/comics/1">Start Reading&lt;/a>
-              &lt;a class="button is-primary" href="/comics/">Read Latest &lt;i class="fas fa-angle-right fa-2x ftfy">&lt;/i>&lt;/a>
-              &lt;/div>
-          &lt;/div>
-          &lt;div class="column has-text-right">
-              &lt;a href="/comics/">&#91;v:latestcomicimage]&lt;/a>
-          &lt;/div>
-      &lt;/div>
-      &lt;/div>&lt;/div>&lt;/div>
+      &lt;div class=&quot;hero is-dark is-bold pushed-up&quot;&gt;
+          &lt;div class=&quot;hero-body&quot;&gt;
+              &lt;div class=&quot;container&quot;&gt;
+                  &lt;div class=&quot;columns&quot;&gt;
+                      &lt;div class=&quot;column&quot;&gt;
+                          &lt;h2 class=&quot;title is-2&quot;&gt;&#91;v:webcomicname]&lt;/h2&gt;
+                          &lt;h3 class=&quot;subtitle is-4&quot;&gt;A modern comic layout&lt;/h3&gt;
+                         	&lt;div class=&quot;description content&quot;&gt;
+                              &lt;p&gt;&#91;v:webcomicdescription]&lt;/p&gt;
+                              &lt;p&gt;Installation is very easy. All you need to do is head on over to &lt;a href=&quot;/install&quot;&gt;install&lt;/a&gt; and copy and paste the code from there. &lt;/p&gt;
+                          &lt;/div&gt;
+                          &lt;div class=&quot;buttons are-medium&quot;&gt;
+                          &lt;a class=&quot;button is-primary&quot; href=&quot;/comics/1&quot;&gt;Start Reading&lt;/a&gt;
+                          &lt;a class=&quot;button is-primary&quot; href=&quot;/comics/&quot;&gt;Read Latest &lt;i class=&quot;fas fa-angle-right fa-2x ftfy&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;column has-text-right&quot;&gt;
+                          &lt;a href=&quot;/comics/&quot;&gt;&#91;v:latestcomicimage]&lt;/a&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
 
-      &lt;section class="section">
-      &lt;div class="container">
-      &lt;h2 class="title">Latest Blog Posts&lt;/h2>
+      &lt;!-- This section is totally optional. You can remove it if you don&#39;t want it! --&gt;
 
-      &lt;hr>
+      &lt;div class=&quot;hero is-light&quot;&gt;
+          &lt;div class=&quot;hero-body&quot;&gt;
+              &lt;div class=&quot;container&quot;&gt;
+                  &lt;div class=&quot;columns&quot;&gt;
+                      &lt;div class=&quot;column&quot;&gt;
+                        &lt;div class=&quot;card&quot;&gt;
+                          &lt;div class=&quot;card-image&quot;&gt;
+                            &lt;figure class=&quot;image is-4by3&quot;&gt;
+                              &lt;img src=&quot;https://bulma.io/images/placeholders/1280x960.png&quot; alt=&quot;Placeholder image&quot;&gt;
+                            &lt;/figure&gt;
+                          &lt;/div&gt;
+                            &lt;div class=&quot;card-content&quot;&gt;
+                              &lt;div class=&quot;content&quot;&gt;
+                                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris.&lt;/p&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;div class=&quot;column&quot;&gt;
+                        &lt;div class=&quot;card&quot;&gt;
+                          &lt;div class=&quot;card-image&quot;&gt;
+                            &lt;figure class=&quot;image is-4by3&quot;&gt;
+                              &lt;img src=&quot;https://bulma.io/images/placeholders/1280x960.png&quot; alt=&quot;Placeholder image&quot;&gt;
+                            &lt;/figure&gt;
+                          &lt;/div&gt;
+                            &lt;div class=&quot;card-content&quot;&gt;
+                              &lt;div class=&quot;content&quot;&gt;
+                                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris.&lt;/p&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;div class=&quot;column&quot;&gt;
+                        &lt;div class=&quot;card&quot;&gt;
+                          &lt;div class=&quot;card-image&quot;&gt;
+                            &lt;figure class=&quot;image is-4by3&quot;&gt;
+                              &lt;img src=&quot;https://bulma.io/images/placeholders/1280x960.png&quot; alt=&quot;Placeholder image&quot;&gt;
+                            &lt;/figure&gt;
+                          &lt;/div&gt;
+                            &lt;div class=&quot;card-content&quot;&gt;
+                              &lt;div class=&quot;content&quot;&gt;
+                                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris.&lt;/p&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+
+
+      &lt;!-- This section controls your blog posts. --&gt;
+
+      &lt;section class=&quot;section&quot;&gt;
+      &lt;div class=&quot;container&quot;&gt;
+      &lt;h2 class=&quot;title&quot;&gt;Latest Blog Posts&lt;/h2&gt;
+
+      &lt;hr&gt;
 
       	&#91;l:latestblogs]
-      	        &lt;h3 class="title is-4">&lt;a href="&#91;v:l.bloglink]">&#91;v:l.blogtitle]&lt;/a>&lt;/h3>
-                    &lt;strong>&lt;a href="&#91;v:l.profilelink]" class="author">&#91;v:l.authorname]&lt;/a>&lt;/strong> &lt;small>&#91;v:l.posttime]&lt;/small>
+      	        &lt;h3 class=&quot;title is-4&quot;&gt;&lt;a href=&quot;&#91;v:l.bloglink]&quot;&gt;&#91;v:l.blogtitle]&lt;/a&gt;&lt;/h3&gt;
+                    &lt;strong&gt;&lt;a href=&quot;&#91;v:l.profilelink]&quot; class=&quot;author&quot;&gt;&#91;v:l.authorname]&lt;/a&gt;&lt;/strong&gt; &lt;small&gt;&#91;v:l.posttime]&lt;/small&gt;
 
-      		&lt;div class="blogmeta">
-                              &lt;a href="&#91;v:l.bloglink]">&#91;v:l.comments] Comments&lt;/a>
-              &lt;/div>
+      		&lt;div class=&quot;blogmeta&quot;&gt;
+                              &lt;a href=&quot;&#91;v:l.bloglink]&quot;&gt;&#91;v:l.comments] Comments&lt;/a&gt;
+              &lt;/div&gt;
 
-              &lt;hr />
+              &lt;hr /&gt;
 
       	&#91;/]
 
-      &lt;/div>&lt;/section>
-</code></pre>
+      &lt;/div&gt;&lt;/section&gt;</code></pre>
     </div>
 
     <h3 class="title">Search</h3>
     <div class="content">
-      <pre><code class="html">&lt;h2 class="title is-2">Search Results&lt;/h2>
-      &lt;div class="content">
+      <pre><code class="html">&lt;h2 class=&quot;title is-2&quot;&gt;Search Results&lt;/h2&gt;
+      &lt;div class=&quot;content&quot;&gt;
                   &#91;c:searched]
                       &#91;c:!foundresults]
-                          &lt;p>Oops, looks like we didn't find anything. Try again!&lt;/p>
+                          &lt;p&gt;Oops, looks like we didn&#39;t find anything. Try again!&lt;/p&gt;
                       &#91;/]
 
                       &#91;c:foundresults]
                           &#91;l:searchresults]
-                              &lt;p>&#91;v:l.number]. &lt;a href="&#91;v:l.comicurl]">&#91;v:l.comictitle]&lt;/a> - &lt;small>&#91;v:l.posttime]&lt;/small>&lt;/p>
+                              &lt;p&gt;&#91;v:l.number]. &lt;a href=&quot;&#91;v:l.comicurl]&quot;&gt;&#91;v:l.comictitle]&lt;/a&gt; - &lt;small&gt;&#91;v:l.posttime]&lt;/small&gt;&lt;/p&gt;
                           &#91;/]
                       &#91;/]
                   &#91;/]
-      &lt;/div>
-</code></pre>
+      &lt;/div&gt;</code></pre>
     </div>
 
     <h3 class="title">Blog Archive</h3>
     <div class="content">
-      <pre><code class="html"></code></pre>
+      <pre><code class="html">&lt;h2 class=&quot;title is-2&quot;&gt;Blog Posts&lt;/h2&gt;
+
+      &#91;c:hasblogs]
+                  &#91;l:blogs_paginated]
+
+                    &lt;h2 class=&quot;title&quot;&gt;&lt;a href=&quot;&#91;v:l.bloglink]&quot;&gt;&#91;v:l.blogtitle]&lt;/a&gt;&lt;/h2&gt;
+                    &lt;strong&gt;&lt;a href=&quot;&#91;v:l.profilelink]&quot; class=&quot;author&quot;&gt;&#91;v:l.authorname]&lt;/a&gt;&lt;/strong&gt; &lt;small&gt;&#91;v:l.posttime]&lt;/small&gt;
+
+                      &#91;c:l.allowcomments]
+                          &lt;div class=&quot;blogmeta&quot;&gt;
+                              &lt;a href=&quot;&#91;v:l.bloglink]&quot;&gt;&#91;v:l.comments] Comments&lt;/a&gt;
+                          &lt;/div&gt;
+                      &#91;/]
+
+                      &lt;hr /&gt;
+                  &#91;/]
+      &#91;/]
+
+              &#91;c:lastpagenumber&gt;1]
+
+                  &lt;div id=&quot;pages&quot; class=&quot;has-text-centered&quot;&gt;
+                      &#91;l:pages]
+                          &#91;c:l.skipped_ahead]
+                              &lt;span class=&quot;pageskip&quot;&gt;...&lt;/span&gt;
+                          &#91;/]
+
+                          &#91;c:l.is_current]
+                              &lt;span class=&quot;currentpage&quot;&gt;
+                          &#91;/]
+
+                          &lt;a href=&quot;&#91;v:l.pagelink]&quot; class=&quot;pagelink&quot;&gt;&#91;v:l.page]&lt;/a&gt;
+
+                          &#91;c:l.is_current]
+                              &lt;/span&gt;
+                          &#91;/]
+                      &#91;/]
+                  &lt;/div&gt;
+              &#91;/]
+
+
+      &#91;c:!hasblogs]
+          &lt;h2 class=&quot;heading&quot;&gt;Error:&lt;/h2&gt;
+
+          &lt;div class=&quot;content&quot;&gt;
+              &lt;div class=&quot;notification is-danger&quot;&gt;
+                  There are currently no blog posts.
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &#91;/]</code></pre>
     </div>
 
     <h3 class="title">Blog Display</h3>
     <div class="content">
-      <pre><code class="html"></code></pre>
+      <pre><code class="html">&lt;div class=&quot;columns&quot;&gt;
+      			&lt;div class=&quot;column is-three-quarters&quot;&gt;
+
+      				&lt;h2 class=&quot;title&quot;&gt;&#91;v:blogtitle]&lt;/h2&gt;
+      				&lt;strong&gt;by &lt;a href=&quot;&#91;v:profilelink]&quot;&gt;&#91;v:authorname]&lt;/a&gt;&lt;/strong&gt; &lt;small&gt;&#91;v:posttime]&lt;/small&gt;
+
+      						&lt;div class=&quot;content mt-5&quot;&gt;
+      							&#91;v:blog]
+      						&lt;/div&gt;
+      			&lt;/div&gt;
+
+        &lt;div class=&quot;column&quot;&gt;
+          &lt;nav class=&quot;pagination&quot; role=&quot;navigation&quot; aria-label=&quot;pagination&quot;&gt;
+      		  &#91;c:nextbloglink]
+      		    &lt;a class=&quot;pagination-previous&quot; href=&quot;&#91;v:nextbloglink]&quot;&gt;Previous&lt;/a&gt;
+      		  &#91;/]
+      		  &#91;c:prevbloglink]
+      		    &lt;a class=&quot;pagination-next&quot; href=&quot;&#91;v:prevbloglink]&quot;&gt;Next Post&lt;/a&gt;
+      		  &#91;/]
+      		  &lt;/nav&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;hr /&gt;
+
+      &lt;h2 class=&quot;title&quot;&gt;Comments&lt;/h2&gt;
+
+
+      	&#91;c:allowcomments]
+      		&lt;div class=&quot;commentform&quot;&gt;
+      			&#91;v:commentform]
+      		&lt;/div&gt;
+
+      	&#91;/]
+
+
+      &#91;c:comments]
+      		&#91;l:comments]
+      		&lt;div class=&quot;box &#91;c:l.depth&lt;=4]reply&#91;v:l.depth]&#91;/]&#91;c:l.depth&gt;4]reply5&#91;/]&quot;&gt;
+      			&lt;article class=&quot;media&quot;&gt;
+      				&lt;div class=&quot;media-left&quot;&gt;
+      					&lt;figure class=&quot;image is-64x64&quot;&gt;
+      						&lt;a href=&quot;&#91;v:l.profilelink]&quot;&gt;&lt;img src=&quot;&#91;c:l.avatar]&#91;v:l.avatar]&#91;/]&#91;c:!l.avatar]https://nocturnenebula.github.io/cf-layouts/bloomer/images/no-avatar.jpg&#91;/]&quot; alt=&quot;v:1.authorname&quot;/&gt;&lt;/a&gt;
+      					&lt;/figure&gt;
+      				&lt;/div&gt;
+      				&lt;div class=&quot;media-content&quot;&gt;
+      					&lt;div class=&quot;content&quot;&gt;
+      						&lt;p&gt;
+      							&lt;strong&gt;&#91;v:l.commenttitle]&lt;/strong&gt; &lt;small&gt;&lt;a href=&quot;&#91;v:l.profilelink]&quot;&gt;&#91;v:l.authorname]&lt;/a&gt;&lt;/small&gt; &lt;small&gt;&#91;v:l.posttime]&lt;/small&gt;
+      							&lt;br&gt;
+      							&#91;v:l.comment]
+      						&lt;/p&gt;
+      					&lt;/div&gt;
+      					&lt;nav class=&quot;level is-mobile&quot;&gt;
+      						&lt;div class=&quot;level-left&quot;&gt;
+      						&lt;a class=&quot;level-item&quot; aria-label=&quot;reply&quot; href=&quot;&#91;v:l.replylink]&quot; onclick=&quot;var new_window = window.open(&#39;&#91;v:l.replylink]&#39;, &#39;sj_comment&#39;, &#39;height=340, width=420&#39;); new_window.focus(); return false;&quot;&gt;Reply&lt;/a&gt;
+      						&lt;a class=&quot;level-item&quot; aria-label=&quot;edit&quot; href=&quot;&#91;v:l.editlink]&quot; onclick=&quot;var new_window = window.open(&#39;&#91;v:l.editlink]&#39;, &#39;sj_comment&#39;, &#39;height=340, width=420&#39;); new_window.focus(); return false;&quot;&gt;Edit&lt;/a&gt;
+      						&lt;a class=&quot;level-item&quot; aria-label=&quot;delete&quot; href=&quot;&#91;v:l.deletelink]&quot; onclick=&quot;var new_window = window.open(&#39;&#91;v:l.deletelink]&#39;, &#39;sj_comment&#39;, &#39;height=340, width=420&#39;); new_window.focus(); return false;&quot;&gt;Delete&lt;/a&gt;
+      						&lt;/div&gt;
+      					&lt;/nav&gt;
+      				&lt;/div&gt;
+      			&lt;/article&gt;
+      		&lt;/div&gt;
+      		&#91;/]
+      	&#91;/]</code></pre>
     </div>
 
     <h3 class="title">Error Page</h3>
     <div class="content">
-      <pre><code class="html"></code></pre>
+      <pre><code class="html">&lt;h2 class=&quot;title&quot;&gt;
+          &#91;v:errortitle]
+      &lt;/h2&gt;
+
+      &lt;div class=&quot;notification is-danger&quot;&gt;
+          &lt;p&gt;&#91;v:errormessage]&lt;/p&gt;
+      &lt;/div&gt;</code></pre>
     </div>
