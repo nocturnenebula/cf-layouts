@@ -4,7 +4,7 @@
 --body-bg-image: url(''); /*add the body image here*/
 --body-bg-position: center; /*add the body image positioning here. this can be two values (ex: top center) */
 --body-bg-repeat: repeat; /* add the body image repeatability here. you can change it to repeat, repeat-x, repeat-y, etc. */
---body-bg-size: contain; /*this changes how you want the bg image to stretch out. */
+--body-bg-size: auto; /*this changes how you want the bg image to stretch out. */
 --body-font: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif ; /*change the font-family of the entire site here*/
 --body-font-size: 16px; /*change the font size of the entire site here*/
 --body-color: #4a4a4a; /*change the font color of the entire site here*/
@@ -44,7 +44,10 @@ hr:last-child {
 /* You don't have to change anything here! Change the variables up top in the :root section. */
 
 body{
-  background: var(--body-bg-color) var(--body-image-bg) var(--body-bg-position) var(--body-bg-repeat) !important;
+  background-color: var(--body-bg-color);
+  background-image:var(--body-bg-image);
+  background-position: var(--body-bg-position);
+  background-repeat: var(--body-bg-repeat);
   background-size: var(--body-bg-size);
   font-family: var(--body-font) !important;
   color: var(--body-color) !important;
@@ -60,7 +63,10 @@ a{
     }
 
 .banner{
-  background: var(--banner-bg-color) var(--banner-image) var(--banner-position) var(--banner-repeat) !important;
+  background-color: var(--banner-bg-color);
+  background-image: var(--banner-image);
+  background-position: var(--banner-position);
+  background-repeat: var(--banner-repeat);
   background-size: var(--banner-size);
   height: var(--banner-height);
 }
@@ -74,7 +80,10 @@ a{
     }
 
 .footer{
-  background: var(--footer-bg-color) var(--footer-bg-image) var(--footer-bg-position) var(--footer-bg-repeat) !important;
+  background-color: var(--footer-bg-color);
+  background-image: var(--footer-bg-image);
+  background-position: var(--footer-bg-position);
+  background-repeat: var(--footer-bg-repeat);
   background-size: var(--footer-bg-size);
 }
 
@@ -135,5 +144,9 @@ a{
 @media screen and (max-width: 768px){
   .comic-nav span{
     display: none;
+  }
+
+  .reply1, .reply2, .reply3, .reply4, .reply5{
+      margin-left: 0;
   }
 }
