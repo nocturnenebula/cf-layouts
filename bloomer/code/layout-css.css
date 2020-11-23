@@ -98,6 +98,9 @@ a{
 
 /* Some other cosmetic changes... */
 
+.comic-image{
+  margin: 2em 0;
+}
 
 .pushed-up{
     margin-top: -6em;
