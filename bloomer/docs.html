@@ -132,8 +132,7 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <div class="content">
 <p>By default, there is a header or &quot;banner&quot; for the layout. You can remove it by removing this section:</p>
 
-<pre>
-<code class="html">&lt;section class=&quot;banner hero is-medium&quot;&gt;
+<pre><code class="html">&lt;section class=&quot;banner hero is-medium&quot;&gt;
   &lt;div class=&quot;hero-body&quot;&gt;
     &lt;div class=&quot;container&quot;&gt;
       &lt;p class=&quot;title&quot;&gt;
@@ -156,7 +155,7 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <div class="navbar-brand"><a class="navbar-item" href="/"><img height="28" src="https://nocturnenebula.github.io/cf-layouts/bloomer/images/logo_white.png" width="128" /> </a> <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navbarBasicExample" role="button"> </a></div>
 
 <div class="navbar-menu" id="navbar-menu">
-<div class="navbar-start"><a class="navbar-item" href="/">Home</a> <a class="navbar-item" href="/comics/1">First</a> <a class="navbar-item" href="/comics/">Latest</a> <a class="navbar-item" href="/archive/">Archive</a> <a class="navbar-item" href="/blog/">Blog</a> [l:extrapages] <a class="navbar-item" href="[v:l.link]">[v:l.title]</a> [/]
+<div class="navbar-start"><a class="navbar-item" href="/">Home</a> <a class="navbar-item" href="/comics/1">First</a> <a class="navbar-item" href="/comics/">Latest</a> <a class="navbar-item" href="/archive/">Archive</a> <a class="navbar-item" href="/blog/">Blog</a>  [l:extrapages]<a class="navbar-item" href="[v:l.link]">[v:l.title]</a>[/]
 
 <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Links</a>
 
@@ -187,7 +186,7 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <div class="navbar-brand"><a class="navbar-item" href="/"><img height="28" src="https://nocturnenebula.github.io/cf-layouts/bloomer/images/logo_white.png" width="128" /> </a> <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navbarBasicExample" role="button"> </a></div>
 
 <div class="navbar-menu" id="navbar-menu">
-<div class="navbar-start"><a class="navbar-item" href="/">Home</a> <a class="navbar-item" href="/comics/1">First</a> <a class="navbar-item" href="/comics/">Latest</a> <a class="navbar-item" href="/archive/">Archive</a> <a class="navbar-item" href="/blog/">Blog</a> [l:extrapages] <a class="navbar-item" href="[v:l.link]">[v:l.title]</a> [/]
+<div class="navbar-start"><a class="navbar-item" href="/">Home</a> <a class="navbar-item" href="/comics/1">First</a> <a class="navbar-item" href="/comics/">Latest</a> <a class="navbar-item" href="/archive/">Archive</a> <a class="navbar-item" href="/blog/">Blog</a> [l:extrapages]<a class="navbar-item" href="[v:l.link]">[v:l.title]</a>[/]
 
 <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Links</a>
 
@@ -213,14 +212,13 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 </div>
 </nav>
 <!-- end navbar example -->
-
+<br>
 <h4 class="title is-4" id="logo">Logo</h4>
 
 <div class="content">
 <p>You can change the logo or remove it all together by deleting this code:</p>
 
-<pre>
-<code class="html">&lt;a class=&quot;navbar-item&quot; href=&quot;/&quot;&gt;
+<pre><code class="html">&lt;a class=&quot;navbar-item&quot; href=&quot;/&quot;&gt;
 	&lt;img src=&quot;http://bloomer-layout.cfw.me/files/logo.png&quot; width=&quot;128&quot; height=&quot;28&quot;&gt;
 &lt;/a&gt;</code></pre>
 </div>
@@ -230,8 +228,7 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <div class="content">
 <p>By default, the links for the navigation are Home, First (comic), Latest (comic), Archive, Blog, and then your extra web pages. There is also a dropdown for outgoing links and for the scroll view, which is located in the next section. You can edit, delete or add more links by editing this section:</p>
 
-<pre>
-<code class="html">&lt;div id=&quot;navbar-menu&quot; class=&quot;navbar-menu&quot;&gt;
+<pre><code class="html">&lt;div id=&quot;navbar-menu&quot; class=&quot;navbar-menu&quot;&gt;
       &lt;div class=&quot;navbar-start&quot;&gt;
 
         &lt;a class=&quot;navbar-item&quot; href=&quot;/&quot;&gt;Home&lt;/a&gt;
@@ -240,9 +237,9 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
         &lt;a class=&quot;navbar-item&quot; href=&quot;/archive/&quot;&gt;Archive&lt;/a&gt;
         &lt;a class=&quot;navbar-item&quot; href=&quot;/blog/&quot;&gt;Blog&lt;/a&gt;
 
-        [l:extrapages]
-          &lt;a class=&quot;navbar-item&quot; href=&quot;[v:l.link]&quot;&gt;[v:l.title]&lt;/a&gt;
-        [/]
+        &#91;l:extrapages&#93;
+          &lt;a class=&quot;navbar-item&quot; href=&quot;&#91;v:l.link&#93;&quot;&gt;&#91;v:l.title&#93;&lt;/a&gt;
+        &#91;/&#93;
       &lt;/div&gt;
 		&lt;/div&gt;</code></pre>
 </div>
@@ -252,20 +249,24 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <div class="content">
 <p>The dropdown helps save you space from all those extra pages, and to provide outgoing links. If you don&#39;t want to use the dropdown, then remove this entire section.</p>
 
-<pre>
-	<code class="html">&lt;div class=&quot;navbar-item has-dropdown is-hoverable&quot;&gt;
+<pre><code class="html">&lt;div class=&quot;navbar-item has-dropdown is-hoverable&quot;&gt;
 		&lt;a class=&quot;navbar-link&quot;&gt;Links&lt;/a&gt;
 		&lt;div class=&quot;navbar-dropdown&quot;&gt;
 			&lt;a class=&quot;navbar-item&quot;&gt;Link&lt;/a&gt;
 			&lt;a class=&quot;navbar-item&quot;&gt;Link&lt;/a&gt;
 			&lt;a class=&quot;navbar-item&quot;&gt;Link&lt;/a&gt;
 			&lt;hr class=&quot;navbar-divider&quot;&gt;
-			[c:infinitescrollenabled]
-				&lt;a class=&quot;navbar-item&quot; href=&quot;[v:infinitescrolllink]&quot;&gt;Scroll View&lt;/a&gt;
-			[/]
+			&#91;c:infinitescrollenabled&#93;
+				&lt;a class=&quot;navbar-item&quot; href=&quot;&#91;v:infinitescrolllink&#93;&quot;&gt;Scroll View&lt;/a&gt;
+			&#91;/&#93;
 		&lt;/div&gt;
-	&lt;/div&gt;
-	</code></pre>
+	&lt;/div&gt;</code></pre>
+
+<p> To keep the Infinite Scroll View, copy and paste this into <code class="html">navbar-start</code>:
+	<pre><code>&#91;c:infinitescrollenabled&#93;
+				&lt;a class=&quot;navbar-item&quot; href=&quot;&#91;v:infinitescrolllink&#93;&quot;&gt;Scroll View&lt;/a&gt;
+			&#91;/&#93;
+		&lt;/div&gt;</code></pre>
 </div>
 
 <h4 class="title is-4" id="icons">Icons</h4>
@@ -295,12 +296,12 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <p>There is an itty bitty code for the content that looks like this:</p>
 
 <pre>
-<code class="html">[c:isextrapage]
-	&lt;h2 class=&quot;title is-2&quot;&gt;[v:pagetitle]&lt;/h2&gt;
-	[/]
-&lt;!--layout:[content]--&gt;</code></pre>
+<code class="html">&#91;c:isextrapage&#93;
+	&lt;h2 class=&quot;title is-2&quot;&gt;&#91;v:pagetitle&#93;&lt;/h2&gt;
+	&#91;/&#93;
+&lt;!--layout:&#91;content&#93;--&gt;</code></pre>
 
-<p><code class="html">&lt;h2 class=&quot;title is-2&quot;&gt;[v:pagetitle]&lt;/h2&gt;</code> is what adds a title to every extra page you make. If you don&#39;t want to use it then just remove that entire line of code.</p>
+<p><code class="html">&lt;h2 class=&quot;title is-2&quot;&gt;&#91;v:pagetitle&#93;&lt;/h2&gt;</code> is what adds a title to every extra page you make. If you don&#39;t want to use it then just remove that entire line of code.</p>
 </div>
 
 <h4 class="title is-4" id="footer">Footer</h4>
@@ -312,7 +313,7 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <code class="html">&lt;footer class=&quot;footer has-text-centered&quot;&gt;
       &lt;div class=&quot;content&quot;&gt;
         &lt;p&gt;&amp;#169; Name(s) Year-Year. All rights reserved.
-        &lt;p&gt;Made by &lt;a href=&quot;https://comicfury.com/profile.php?username=nocturnenebula&quot; target=&quot;_blank&quot;&gt;nocturnenebula&lt;/a&gt; with &lt;a href=&quot;https://bulma.io&quot; target=&quot;_blank&quot;&gt;Bulma&lt;/a&gt;. | Hosted on &lt;a href=&quot;https://comicfury.com/&quot; target=&quot;_blank&quot;&gt;Comic Fury&lt;span class=&quot;subtle&quot;&gt; Webcomic Hosting&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;Made by &lt;a href=&quot;https://comicfury.com/profile.php?username=nocturnenebula&quot; target=&quot;_blank&quot;&gt;nocturnenebula&lt;/a&gt; with &lt;a href=&quot;https://bulma.io&quot; target=&quot;_blank&quot;&gt;Bulma&lt;/a&gt;. | Hosted on &lt;a href=&quot;https://comicfury.com/&quot; target=&quot;_blank&quot;&gt;Comic Fury Webcomic Hosting&lt;/p&gt;
       &lt;/div&gt;
     &lt;/footer&gt;</code></pre>
 </div>
@@ -364,30 +365,30 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <h4 class="title is-4" id="comic-navigation">Customizing</h4>
 
 <div class="content">
-<p>WIP.</p>
+<p>For further customization, you'll need to know CSS and HTML. (WIP)</p>
 </div>
 
 <hr />
 <h3 class="title is-3" id="comic">Comic Page</h3>
 
-<div class="content">&nbsp;</div>
+<div class="content"><p>The <strong>Comic Page</strong> is aptly named, it's where all of your code for the comic pages go.</p></div>
 
 <h4 class="title is-4" id="comic-navigation">Comic Navigation</h4>
 
 <div class="content">
-<p>&nbsp;</p>
+<p>By default, the navigation uses <a href="https://fontawesome.com" target="_blank">FontAwesome</a> icons which scale with the webpage. If you want to remove the text so it's just the arrows, then remove all <code class="html">&lt;span&gt;</code> classes including the text inside of them. If you want to use your own custom images, then replace the <code class="html">&lt;i&gt;</code> tags with your <code class="html">img</code> tags.</p>
 </div>
 
 <h4 class="title is-4" id="comic-page">Comic Page Image</h4>
 
 <div class="content">
-<p>&nbsp;</p>
+<p>(WIP)</p>
 </div>
 
 <h4 class="title is-4" id="comic-comments">Comic Comments</h4>
 
 <div class="content">
-<p>&nbsp;</p>
+<p>(WIP)</p>
 </div>
 
 <hr />
@@ -407,43 +408,100 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <h4 class="title is-4" id="intro">Introduction</h4>
 
 <div class="content">
-<p><b>The introduction</b> of the overview page consists of the comic&#39;s title, a customizeable subtitle, the description, two buttons for the first and latest comic, and finally the image of the latest comic.</p>
+<p><b>The introduction</b> of the overview page consists of the comic&#39;s title, the slogan, the description, two buttons for the first and latest comic, and finally the image of the latest comic.</p>
+<p>By default, the title, slogan and description is what you added in <strong>Manage</strong> > <strong>Edit Webcomic Profile/Info</strong>.</p>
+<p>To change the button colors, see this for reference: <a href="https://bulma.io/documentation/elements/button/#colors" target="_blank">https://bulma.io/documentation/elements/button/#colors</a></p>
 </div>
 
 <h4 class="title is-4" id="cards">Cards</h4>
 
 <div class="content">
-<p><b>Cards</b> are a little feature added to make the overview page more interesting. Use them for listing links, cast members, etc. or don&#39;t use them at all! Just delete the entire code beginning with <code class="html">&lt;div class=&quot;hero is-light&quot;&gt;</code></p>
+<p><b>Cards</b> are a little feature added to make the overview page more interesting. Use them for listing links, cast members, etc. or don&#39;t use them at all! Just delete the entire code beginning with <code class="html">&lt;div class=&quot;hero is-light&quot;&gt;</code>.</p>
+</div>
+
+<div class="hero is-light">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                  <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      </figure>
+                    </div>
+                      <div class="card-content">
+                        <div class="content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Phasellus nec iaculis mauris.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="column">
+                  <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      </figure>
+                    </div>
+                      <div class="card-content">
+                        <div class="content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Phasellus nec iaculis mauris.</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="column">
+                  <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                      </figure>
+                    </div>
+                      <div class="card-content">
+                        <div class="content">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Phasellus nec iaculis mauris.</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <hr />
 <h3 class="title is-3" id="search">Search</h3>
 
 <div class="content">
-<p><b>Search</b> is the landing page for any search results.</p>
+<p><b>Search</b> is the landing page for any search results. You can change the error message in search (or make it prettier) by changing this section:</p>
+<pre><code class="html">&lt;p&gt;Oops, looks like we didn&#39;t find anything. Try again!&lt;/p&gt;</code></pre>
 </div>
 
 <h3 class="title is-3" id="blog-archive">Blog Archive</h3>
 
 <div class="content">
-<p><b>Blog Archive</b> controls the appearance of the list of blog posts. By default, the blog post&#39;s contents aren&#39;t visible, but if you want the archive to include the blog post&#39;s contents then add this section after <code class="html">&lt;strong&gt;&lt;a href=&quot;[v:l.profilelink]&quot; class=&quot;author&quot;&gt;[v:l.authorname]&lt;/a&gt;&lt;/strong&gt; &lt;small&gt;[v:l.posttime]&lt;/small&gt;</code>:</p>
+<p><b>Blog Archive</b> controls the appearance of the list of blog posts. By default, the blog post&#39;s contents aren&#39;t visible, but if you want the archive to include the blog post&#39;s contents then add this section after <code class="html">&lt;strong&gt;&lt;a href=&quot;&#91;v:l.profilelink&#93;&quot; class=&quot;author&quot;&gt;&#91;v:l.authorname&#93;&lt;/a&gt;&lt;/strong&gt; &lt;small&gt;&#91;v:l.posttime&#93;&lt;/small&gt;</code>:</p>
 
-<pre>
-<code class="html">&lt;div class=&quot;content mt-5&quot;&gt;
-      [v:blog]
+<pre><code class="html">&lt;div class=&quot;content mt-5&quot;&gt;
+      &#91;v:blog&#93;
     &lt;/div&gt;</code></pre>
 </div>
 
 <h3 class="title is-3" id="blog-display">Blog Display</h3>
 
 <div class="content">
-<p><b>Blog Display</b> controls the blog post&#39;s appearance.</p>
+<p><b>Blog Display</b> controls the blog post&#39;s appearance. By default, it consists of the blog post itself with navigation buttons on its right, and then the comments.</p>
 </div>
 
 <h3 class="title is-3" id="error">Error Page</h3>
 
 <div class="content">
-<p>Self-explanatory. This is what will show up when someone reaches a page that doesn&#39;t exist (or some other error-related reason).</p>
+<p>Self-explanatory. This is what will show up when someone reaches a page that doesn&#39;t exist (or some other error-related reason). You can add images and other content to this section.</p>
 </div>
+
 </div>
 </div>
