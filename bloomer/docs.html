@@ -373,7 +373,11 @@ pre {max-height:325px; overflow-x:hidden; white-space: pre-wrap; border-bottom-l
 <h4 class="title is-4" id="comic-page">Comic Page Image</h4>
 
 <div class="content">
-<p>This is what controls the comic page's look. If you want to add something fancy like rounding the edges of image, then add this to the layout CSS: </p>
+<p>This is what controls the comic page's look. There's not much to customize here, but if you want to add something fancy to the comic image like a border shadow, then add this to <strong>Layout CSS</strong>:</p>
+
+<pre><code class="css">.comic img {
+    box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+    border-radius: 6px;</code></pre>
 </div>
 
 <h4 class="title is-4" id="comic-comments">Comic Comments</h4>
